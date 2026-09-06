@@ -29,10 +29,16 @@ html{-webkit-text-size-adjust:100%}
 
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:var(--ink);
-  color:#fff;
+  background:var(--panna);
+  color:var(--testo);
   font-size:19px;
   line-height:1.55;
+}
+
+/* la prima schermata: sfondo scuro, riempie il telefono */
+.schermata{
+  background:var(--ink);
+  color:#fff;
   min-height:100vh;
   min-height:100svh;
   display:flex;
@@ -85,9 +91,24 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   margin-top:30px;text-align:center;font-size:16px;color:#6B727B
 }
 
+/* ---------- sezione chiara, si vede scrollando ---------- */
+.spiega{background:var(--panna);color:var(--testo);padding:44px 22px 52px}
+.spiega h2{font-size:24px;font-weight:800;letter-spacing:-0.3px;line-height:1.2}
+.spiega p{font-size:19px;margin-top:14px}
+.spiega .elenco{list-style:none;margin-top:24px}
+.spiega .elenco li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;font-size:19px}
+.spiega .elenco .n{
+  flex:0 0 auto;font-weight:800;font-size:19px;color:var(--accent);
+  min-width:22px;line-height:1.55
+}
+.spiega .chiusura{
+  margin-top:26px;padding-top:20px;border-top:1px solid var(--bordo);
+  font-size:19px;font-weight:700
+}
+
 /* telefoni con lo schermo basso: stringo tutto, deve restare una schermata sola */
 @media (max-height:720px){
-  body{padding:16px 22px calc(10px + env(safe-area-inset-bottom))}
+  .schermata{padding:16px 22px calc(10px + env(safe-area-inset-bottom))}
   .occhiello{margin-bottom:10px}
   h1{font-size:33px}
   .sottotitolo{font-size:19px;margin-top:12px}
@@ -101,11 +122,15 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   body{font-size:21px}
   h1{font-size:52px}
   .sottotitolo{font-size:24px}
+  .spiega{padding:64px 22px 72px}
+  .spiega h2{font-size:28px}
+  .spiega p,.spiega .elenco li{font-size:20px}
 }
 </style>
 </head>
 <body>
 
+<div class="schermata">
 <main class="wrap">
 
   <span class="occhiello">Il negozio del giorno</span>
@@ -130,6 +155,23 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   <p class="firma">Pragmatek — Fedele Buccino</p>
 
 </main>
+</div>
+
+<!-- ============ SI VEDE SCROLLANDO ============ -->
+<section class="spiega">
+  <div class="wrap">
+    <h2>Perché lo facciamo</h2>
+    <p>Ci piace che i negozi del quartiere si facciano conoscere dalle persone che ci vivono vicino. Ogni giorno mettiamo in evidenza un'attività diversa della tua zona, con un'offerta pensata solo per chi segue il canale.</p>
+
+    <ul class="elenco">
+      <li><span class="n">1.</span> <span>Ogni giorno tocca a un negozio diverso della tua zona</span></li>
+      <li><span class="n">2.</span> <span>Solo chi segue il canale vede l'offerta del giorno</span></li>
+      <li><span class="n">3.</span> <span>Nessun costo, nessuna registrazione: segui e basta</span></li>
+    </ul>
+
+    <p class="chiusura">Gratis per sempre. Ti disiscrivi quando vuoi, in un tocco.</p>
+  </div>
+</section>
 
 <script>
 /* ================================================================
