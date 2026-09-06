@@ -48,56 +48,59 @@ body{
   text-transform:uppercase;color:var(--sole);margin-bottom:16px
 }
 
-h1{font-size:36px;line-height:1.15;letter-spacing:-0.8px;font-weight:800;color:#fff}
+h1{font-size:42px;line-height:1.12;letter-spacing:-1px;font-weight:800;color:#fff}
 h1 em{font-style:normal;color:var(--sole)}
 
-.sottotitolo{font-size:19px;color:#D9DDE3;margin-top:18px}
+.sottotitolo{font-size:22px;color:#D9DDE3;margin-top:18px}
 
 /* ---------- scelta della zona ---------- */
 .scelta{margin-top:34px}
-.scelta label{display:block;font-weight:700;font-size:18px;margin-bottom:10px}
+.scelta label{display:block;font-weight:700;font-size:21px;margin-bottom:10px}
 
 select{
-  width:100%;font-family:inherit;font-size:19px;color:var(--testo);
+  width:100%;font-family:inherit;font-size:21px;color:var(--testo);
   background:var(--panna);border:1px solid var(--bordo);border-radius:12px;
-  padding:18px 16px;-webkit-appearance:none;appearance:none
+  padding:19px 16px;-webkit-appearance:none;appearance:none
 }
 select:focus{outline:3px solid var(--sole);outline-offset:1px}
 
 .errore{
-  margin-top:10px;font-size:17px;font-weight:700;color:var(--sole)
+  margin-top:10px;font-size:19px;font-weight:700;color:var(--sole)
 }
 
 /* ---------- bottone, identico a quello del sito ---------- */
 .cta{
   display:inline-flex;align-items:center;justify-content:center;gap:12px;
   background:var(--accent);color:#fff;text-decoration:none;
-  font-family:inherit;font-size:20px;font-weight:700;line-height:1;
+  font-family:inherit;font-size:22px;font-weight:700;line-height:1.15;
   padding:21px 30px;border-radius:12px;width:100%;
   border:none;cursor:pointer;margin-top:16px
 }
 .cta:active{background:#B94408}
 .cta svg{width:26px;height:26px;flex:0 0 26px}
 
-.nota{font-size:16px;color:#9AA2AD;margin-top:14px;text-align:center}
+.nota{font-size:18px;color:#9AA2AD;margin-top:14px;text-align:center}
 
 .firma{
-  margin-top:36px;text-align:center;font-size:14px;color:#6B727B
+  margin-top:30px;text-align:center;font-size:16px;color:#6B727B
 }
 
 /* telefoni con lo schermo basso: stringo tutto, deve restare una schermata sola */
 @media (max-height:720px){
-  body{padding-top:24px}
-  h1{font-size:30px}
-  .sottotitolo{font-size:17px;margin-top:14px}
-  .scelta{margin-top:24px}
-  .firma{margin-top:20px}
+  body{padding:16px 22px calc(10px + env(safe-area-inset-bottom))}
+  .occhiello{margin-bottom:10px}
+  h1{font-size:33px}
+  .sottotitolo{font-size:19px;margin-top:12px}
+  .scelta{margin-top:18px}
+  .cta{margin-top:12px}
+  .nota{margin-top:10px}
+  .firma{margin-top:14px}
 }
 
 @media (min-width:600px){
-  body{font-size:20px}
-  h1{font-size:44px}
-  .sottotitolo{font-size:21px}
+  body{font-size:21px}
+  h1{font-size:52px}
+  .sottotitolo{font-size:24px}
 }
 </style>
 </head>
