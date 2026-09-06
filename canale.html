@@ -61,6 +61,24 @@ h1 em{font-style:normal;color:var(--sole)}
 
 .sottotitolo{font-size:22px;color:#D9DDE3;margin-top:18px}
 
+#credibilita{font-size:19px;color:var(--sole);font-weight:700;margin-top:14px}
+
+/* card di esempio: com'e' fatto il messaggio che ricevi */
+.esempio{
+  background:var(--panna);color:var(--testo);
+  border-radius:14px;padding:12px 14px;margin-top:14px
+}
+.esempio .badge{
+  display:inline-block;background:var(--sole);color:var(--ink);
+  font-size:12px;font-weight:700;border-radius:999px;padding:3px 9px
+}
+.esempio .negozio{font-size:17px;font-weight:800;margin-top:8px}
+.esempio .indirizzo{font-size:14px;color:var(--testo-chiaro);margin-top:2px}
+.esempio .offerta{
+  background:var(--crema);border-radius:10px;
+  padding:9px 11px;margin-top:8px;font-size:15px
+}
+
 /* ---------- scelta della zona ---------- */
 .scelta{margin-top:34px}
 .scelta label{display:block;font-weight:700;font-size:21px;margin-bottom:10px}
@@ -128,6 +146,25 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   .scelta{margin-top:22px}
   .cta{margin-top:14px}
   .nota{margin-top:12px}
+  #credibilita{font-size:18px;margin-top:12px}
+  .esempio{margin-top:14px;padding:12px 14px}
+  .esempio .offerta{margin-top:8px}
+}
+
+/* sul telefono titolo e sottotitolo si stringono, per tenere il bottone
+   dentro la prima schermata anche con la card di esempio */
+@media (max-width:599px){
+  .schermata{padding:24px 22px calc(14px + env(safe-area-inset-bottom))}
+  .occhiello{margin-bottom:12px}
+  h1{font-size:34px;line-height:1.15}
+  .sottotitolo{font-size:19px;margin-top:14px}
+  #credibilita{font-size:17px;margin-top:12px}
+  .esempio{margin-top:12px}
+  .scelta{margin-top:20px}
+  select{padding:17px 16px}
+  .aiuto{margin-top:7px}
+  .cta{margin-top:12px}
+  .nota{margin-top:8px}
 }
 
 @media (min-height:721px){
@@ -152,6 +189,15 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   <span class="occhiello">Il negozio del giorno</span>
   <h1>Lo sconto del giorno, nel <em>tuo quartiere</em></h1>
   <p class="sottotitolo">Ogni giorno un negozio della tua zona propone un'offerta esclusiva a chi segue il canale WhatsApp gratuito.</p>
+
+  <p id="credibilita">Negozi veri, vicino a te.</p>
+
+  <div class="esempio">
+    <span class="badge">📍 Negozio del giorno</span>
+    <div class="negozio">Panetteria da Luigi</div>
+    <div class="indirizzo">via Roma 12 — a 300 metri</div>
+    <div class="offerta">Solo oggi: focaccia e caffè, 3,50€ invece di 5€</div>
+  </div>
 
   <div class="scelta">
     <label for="zona">Scegli la tua zona</label>
@@ -197,24 +243,25 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
 
 <script>
 /* ================================================================
-   LE ZONE ATTIVE E I LORO CANALI
+   LE ZONE ATTIVE: per ognuna il canale WhatsApp e i negozi da citare
 
-   Aggiungi una riga per ogni canale che apri: a sinistra il nome
-   che si legge nel menu, a destra il link del canale WhatsApp.
-   Nel menu compaiono SOLO le zone scritte qui.
+   Aggiungi una riga per ogni canale che apri. Nel menu compaiono
+   SOLO le zone scritte qui.
 
    >>> I link qui sotto sono di prova: sostituiscili con quelli veri. <<<
    ================================================================ */
 var zone = {
-  "Avigliana": "https://whatsapp.com/channel/XXXXXXXXXXXXXXXXXX",
-  "Susa":      "https://whatsapp.com/channel/YYYYYYYYYYYYYYYYYY",
-  "Bussoleno": "https://whatsapp.com/channel/ZZZZZZZZZZZZZZZZZZ"
+  "Avigliana": { link: "https://whatsapp.com/channel/XXXXXXXXXXXXXXXXXX", negozi: "Panetteria da Luigi, Bar Centrale e altri negozi" },
+  "Susa":      { link: "https://whatsapp.com/channel/YYYYYYYYYYYYYYYYYY", negozi: "negozi della tua zona" },
+  "Bussoleno": { link: "https://whatsapp.com/channel/ZZZZZZZZZZZZZZZZZZ", negozi: "negozi della tua zona" }
 };
 
 (function () {
   var menu = document.getElementById('zona');
   var bottone = document.getElementById('segui');
   var errore = document.getElementById('errore');
+  var credibilita = document.getElementById('credibilita');
+  var FRASE_NEUTRA = 'Negozi veri, vicino a te.';
 
   // riempie il menu con le sole zone elencate qui sopra
   Object.keys(zone).forEach(function (nome) {
@@ -224,8 +271,23 @@ var zone = {
     menu.appendChild(voce);
   });
 
+  function aggiornaCredibilita() {
+    var scelta = zone[menu.value];
+    credibilita.textContent = scelta ? 'Con ' + scelta.negozi + '.' : FRASE_NEUTRA;
+  }
+
+  // se l'indirizzo contiene ?zona=..., la zona parte gia scelta
+  var chiesta = new URLSearchParams(window.location.search).get('zona');
+  if (chiesta) {
+    Object.keys(zone).forEach(function (nome) {
+      if (nome.toLowerCase() === chiesta.trim().toLowerCase()) menu.value = nome;
+    });
+  }
+  aggiornaCredibilita();
+
   menu.addEventListener('change', function () {
     if (menu.value) errore.hidden = true;
+    aggiornaCredibilita();
   });
 
   bottone.addEventListener('click', function () {
@@ -235,7 +297,7 @@ var zone = {
       return;
     }
     errore.hidden = true;
-    window.open(zone[menu.value], '_blank', 'noopener');
+    window.open(zone[menu.value].link, '_blank', 'noopener');
   });
 })();
 </script>
