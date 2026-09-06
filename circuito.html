@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Il negozio del giorno — circuito di quartiere</title>
+<meta name="description" content="Ogni giorno un negozio del quartiere viene messo in evidenza con un'offerta esclusiva sul canale WhatsApp di zona. Adesione gratuita nella fase di lancio.">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0iIzE1MTcxQiIvPjx0ZXh0IHg9IjE2IiB5PSIyMy41IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNEOTUzMEEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlA8L3RleHQ+PC9zdmc+">
+<meta name="theme-color" content="#15171B">
+<style>
+/* Stessi colori, stesso font e stessi bottoni delle altre pagine del sito. */
+:root{
+  --ink:#15171B;
+  --ink-2:#23262C;
+  --panna:#FDF7EF;
+  --crema:#F5E9D8;
+  --testo:#1B1D21;
+  --testo-chiaro:#5F6670;
+  --accent:#D9530A;
+  --sole:#F9A63F;
+  --bordo:#E7DBC8;
+  --bordo-scuro:#33373F;
+  --max:680px;
+  --largo:1000px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--panna);
+  color:var(--testo);
+  font-size:19px;
+  line-height:1.55;
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.wrap-largo{max-width:var(--largo);margin:0 auto;padding:0 22px}
+
+section{padding:58px 0}
+
+h1{font-size:36px;line-height:1.15;letter-spacing:-0.8px;font-weight:800}
+h2{font-size:28px;line-height:1.2;letter-spacing:-0.4px;font-weight:800;margin-bottom:28px}
+h3{font-size:20px;font-weight:700;line-height:1.35}
+p{margin-top:14px}
+
+.occhiello{
+  display:inline-block;font-size:14px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--sole);margin-bottom:18px
+}
+.occhiello.scura{color:var(--accent)}
+
+.illo{display:block;width:100%;height:auto}
+.illo text{font-family:inherit}
+
+/* ---------- 1. APERTURA ---------- */
+.hero{background:var(--ink);color:#fff;padding:52px 0 56px}
+.hero h1{color:#fff}
+.hero h1 em{font-style:normal;color:var(--sole)}
+.hero p{font-size:21px;color:#D9DDE3;margin-top:20px}
+.hero .telefono{max-width:300px;margin:44px auto 0}
+.hero .cta{margin-top:30px}
+
+/* ---------- 2. COME FUNZIONA ---------- */
+.passi{list-style:none}
+.passi li{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--bordo)}
+.passi li:last-child{border-bottom:none}
+.num{
+  flex:0 0 44px;width:44px;height:44px;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:800;font-size:20px;
+  display:flex;align-items:center;justify-content:center
+}
+.passi h3{display:flex;align-items:center;gap:10px}
+.passi h3 svg{width:24px;height:24px;flex:0 0 24px;color:var(--accent)}
+.passi p{margin-top:6px;color:var(--testo-chiaro);font-size:18px}
+
+/* ---------- 3. PERCHÉ È GRATIS ORA ---------- */
+.gratis{background:var(--sole);color:var(--ink)}
+.gratis h2{margin-bottom:16px}
+.gratis p{font-size:20px;margin-top:12px}
+.gratis strong{font-weight:800}
+
+/* ---------- 4. MODULO ---------- */
+.modulo{background:#fff;border-top:1px solid var(--bordo);border-bottom:1px solid var(--bordo)}
+.campo{margin-top:22px}
+.campo label{display:block;font-weight:700;font-size:18px;margin-bottom:8px}
+.campo .aiuto{display:block;font-weight:400;font-size:16px;color:var(--testo-chiaro);margin-top:4px}
+.campo input[type=text],
+.campo input[type=tel],
+.campo input[type=email],
+.campo select,
+.campo textarea{
+  width:100%;font-family:inherit;font-size:19px;color:var(--testo);
+  background:var(--panna);border:1px solid var(--bordo);border-radius:12px;
+  padding:16px 16px;-webkit-appearance:none;appearance:none
+}
+.campo select{background-image:none}
+.campo textarea{min-height:130px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus{
+  outline:3px solid var(--sole);outline-offset:1px;border-color:var(--accent)
+}
+.campo input[type=file]{
+  width:100%;font-family:inherit;font-size:17px;
+  background:var(--panna);border:1px dashed var(--bordo);border-radius:12px;padding:16px
+}
+.obbligatorio{color:var(--accent);font-weight:800}
+.nascosto{position:absolute;left:-9999px}
+.invia{margin-top:30px}
+.sotto-modulo{font-size:16px;color:var(--testo-chiaro);margin-top:16px;text-align:center}
+
+/* ---------- 5. CONTATTO ---------- */
+.contatto{background:var(--ink);color:#fff;text-align:center;padding:64px 0}
+.contatto h2{color:#fff}
+.contatto p{color:#D9DDE3;max-width:460px;margin-left:auto;margin-right:auto}
+
+/* ---------- BOTTONI ---------- */
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-family:inherit;font-size:20px;font-weight:700;line-height:1;
+  padding:21px 30px;border-radius:12px;width:100%;max-width:420px;
+  border:none;cursor:pointer
+}
+.cta:active{background:#B94408}
+.cta svg{width:26px;height:26px;flex:0 0 26px}
+
+footer{padding:26px 0 34px;text-align:center;font-size:15px;color:var(--testo-chiaro)}
+footer a{color:var(--accent);font-weight:700;text-decoration:none}
+
+@media (min-width:760px){
+  body{font-size:20px}
+  h1{font-size:52px}
+  h2{font-size:34px}
+  section{padding:76px 0}
+  .hero{padding:76px 0}
+  .hero-griglia{display:flex;align-items:center;gap:56px}
+  .hero-testo{flex:1 1 auto}
+  .hero .telefono{flex:0 0 300px;margin:0}
+  .hero p{font-size:24px}
+  .due-campi{display:flex;gap:18px}
+  .due-campi .campo{flex:1 1 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. APERTURA ============ -->
+<section class="hero">
+  <div class="wrap-largo hero-griglia">
+
+    <div class="hero-testo">
+      <span class="occhiello">Il negozio del giorno</span>
+      <h1>Fai conoscere il tuo negozio ai clienti del <em>tuo quartiere</em></h1>
+      <p>Ogni giorno un negozio del circuito viene messo in evidenza con un'offerta esclusiva ai follower del canale WhatsApp di zona.</p>
+      <a class="cta" href="#adesione">Aderisci gratis</a>
+    </div>
+
+    <!-- IMMAGINE: il canale di zona che annuncia il negozio del giorno -->
+    <div class="telefono">
+      <svg class="illo" viewBox="0 0 300 400" role="img" aria-label="Il canale WhatsApp di zona che annuncia il negozio del giorno">
+        <rect x="4" y="4" width="292" height="392" rx="34" fill="#FDF7EF"/>
+        <rect x="16" y="18" width="268" height="364" rx="24" fill="#ffffff"/>
+        <path d="M16 42a24 24 0 0 1 24-24h220a24 24 0 0 1 24 24v26H16z" fill="#15171B"/>
+        <circle cx="44" cy="44" r="13" fill="#D9530A"/>
+        <rect x="66" y="36" width="118" height="8" rx="4" fill="#ffffff" opacity=".92"/>
+        <rect x="66" y="50" width="74" height="7" rx="3.5" fill="#F9A63F"/>
+
+        <rect x="30" y="86" width="240" height="40" rx="12" fill="#F9A63F"/>
+        <text x="150" y="111" font-size="14" font-weight="700" fill="#15171B" text-anchor="middle">Il negozio del giorno</text>
+
+        <rect x="30" y="136" width="240" height="132" rx="12" fill="#F0EDE8"/>
+        <rect x="44" y="150" width="212" height="66" rx="8" fill="#E2DDD5"/>
+        <circle cx="80" cy="176" r="10" fill="#F9A63F"/>
+        <path d="M56 206l26-24 20 20 14-12 18 16z" fill="#D9530A"/>
+        <text x="44" y="238" font-size="13.5" font-weight="700" fill="#1B1D21">Panetteria da Luigi</text>
+        <text x="44" y="258" font-size="13" fill="#5F6670">via Roma 12 — a 300 metri</text>
+
+        <rect x="30" y="278" width="240" height="46" rx="12" fill="#FFE0C7"/>
+        <text x="44" y="299" font-size="13" fill="#1B1D21">Solo oggi: focaccia e caffè</text>
+        <text x="44" y="317" font-size="13" font-weight="700" fill="#D9530A">3,50 € invece di 5 €</text>
+
+        <rect x="30" y="340" width="150" height="30" rx="15" fill="#F0EDE8"/>
+        <text x="105" y="360" font-size="12.5" fill="#5F6670" text-anchor="middle">1.248 follower</text>
+        <circle cx="252" cy="355" r="15" fill="#D9530A"/>
+        <path d="M246 355h12M253 350l5 5-5 5" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 2. COME FUNZIONA ============ -->
+<section>
+  <div class="wrap">
+    <span class="occhiello scura">Come funziona</span>
+    <h2>Quattro passi, e ci pensiamo noi</h2>
+
+    <ul class="passi">
+      <li>
+        <span class="num">1</span>
+        <div>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            Aderisci, gratis
+          </h3>
+          <p>Compili il modulo qui sotto. Ci vogliono due minuti e non paghi niente.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="3"/><circle cx="12" cy="12" r="3.4"/><path d="M8 5l1.5-2h5L16 5"/></svg>
+            Mandi una foto e due righe
+          </h3>
+          <p>Una foto del negozio e una breve presentazione: cosa vendi e cosa ti rende diverso.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.3 5.3L20 9l-4.4 3.8L17 19l-5-3-5 3 1.4-6.2L4 9l5.7-.7z"/></svg>
+            A turno tocca a te
+          </h3>
+          <p>Il tuo negozio diventa "il negozio del giorno" nel canale WhatsApp della tua zona, con la tua offerta.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">4</span>
+        <div>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M18 8h4M20 6v4"/></svg>
+            La gente della zona viene da te
+          </h3>
+          <p>Vedono l'offerta sul telefono, sanno dove sei, e passano. Sono clienti che stanno a due strade da te.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 3. PERCHÉ È GRATIS ORA ============ -->
+<section class="gratis">
+  <div class="wrap">
+    <h2>Perché adesso è gratis</h2>
+    <p>Il circuito sta partendo adesso, e un canale di zona serve a poco se dentro c'è un negozio solo: più siamo, più vale per tutti.</p>
+    <p><strong>Chi entra in questa prima fase non paga niente</strong>, e resta dentro alle stesse condizioni anche dopo.</p>
+  </div>
+</section>
+
+<!-- ============ 4. MODULO DI ADESIONE ============ -->
+<section class="modulo" id="adesione">
+  <div class="wrap">
+    <span class="occhiello scura">Adesione</span>
+    <h2>Fammi sapere chi sei</h2>
+    <p>Compili qui, ti richiamo io per il resto. I campi con <span class="obbligatorio">*</span> sono quelli che mi servono per forza.</p>
+
+    <!-- Il modulo è gestito da Netlify: gli invii arrivano nel pannello, senza codice e senza JavaScript. -->
+    <form name="adesione-circuito" method="POST" enctype="multipart/form-data"
+          data-netlify="true" netlify-honeypot="campo-bot" action="/grazie.html">
+
+      <input type="hidden" name="form-name" value="adesione-circuito">
+      <p class="nascosto" aria-hidden="true">
+        <label>Non compilare questo campo: <input name="campo-bot" tabindex="-1" autocomplete="off"></label>
+      </p>
+
+      <div class="campo">
+        <label for="negozio">Nome del negozio <span class="obbligatorio">*</span></label>
+        <input type="text" id="negozio" name="nome-negozio" required autocomplete="organization">
+      </div>
+
+      <div class="due-campi">
+        <div class="campo">
+          <label for="categoria">Categoria <span class="obbligatorio">*</span></label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Scegli…</option>
+            <option>Bar</option>
+            <option>Ristorante</option>
+            <option>Abbigliamento</option>
+            <option>Alimentari</option>
+            <option>Artigiano</option>
+            <option>Altro</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="zona">Comune o zona <span class="obbligatorio">*</span></label>
+          <!-- ELENCO ZONE: sostituisci queste voci con i comuni e i quartieri veri del circuito -->
+          <select id="zona" name="comune-zona" required>
+            <option value="">Scegli…</option>
+            <option>Torino — Centro</option>
+            <option>Torino — San Salvario</option>
+            <option>Torino — Crocetta</option>
+            <option>Torino — Santa Rita</option>
+            <option>Torino — Vanchiglia</option>
+            <option>Torino — Aurora</option>
+            <option>Rivoli</option>
+            <option>Alpignano</option>
+            <option>Avigliana</option>
+            <option>Almese</option>
+            <option>Sant'Ambrogio di Torino</option>
+            <option>Condove</option>
+            <option>Bussoleno</option>
+            <option>Susa</option>
+            <option>Altro — lo scrivo nella presentazione</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="indirizzo">Indirizzo <span class="obbligatorio">*</span></label>
+        <input type="text" id="indirizzo" name="indirizzo" required autocomplete="street-address">
+      </div>
+
+      <div class="due-campi">
+        <div class="campo">
+          <label for="telefono">Telefono <span class="obbligatorio">*</span></label>
+          <input type="tel" id="telefono" name="telefono" required autocomplete="tel" inputmode="tel">
+        </div>
+
+        <div class="campo">
+          <label for="email">Email
+            <span class="aiuto">Se ce l'hai. Altrimenti ti scrivo su WhatsApp.</span>
+          </label>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email">
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="foto">Foto del negozio
+          <span class="aiuto">Una foto della vetrina o del banco, anche fatta col telefono.</span>
+        </label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+      </div>
+
+      <div class="campo">
+        <label for="presentazione">Due righe di presentazione
+          <span class="aiuto">Cosa vendi e cosa ti rende diverso. Massimo 300 caratteri.</span>
+        </label>
+        <textarea id="presentazione" name="presentazione" maxlength="300"></textarea>
+      </div>
+
+      <button type="submit" class="cta invia">Richiedi l'adesione gratuita</button>
+      <p class="sotto-modulo">Nessun costo, nessun impegno. Ti richiamo io entro un paio di giorni.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 5. CONTATTO ============ -->
+<section class="contatto">
+  <div class="wrap">
+    <h2>Preferisci parlarne?</h2>
+    <p>Scrivimi su WhatsApp e ti spiego in due minuti come funziona. Senza impegno.</p>
+    <p>
+      <a class="cta" href="https://wa.me/393514317452?text=Ciao%2C%20ti%20scrivo%20per%20il%20circuito%20di%20quartiere">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Pragmatek — Fedele Buccino</strong><br>
+    P.IVA IT13295980018
+  </div>
+</footer>
+
+</body>
+</html>
