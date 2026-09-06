@@ -175,12 +175,6 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   .nota.app{margin-top:8px}
 }
 
-/* solo sugli schermi davvero bassi la card sparisce: sotto questa
-   altezza, tenendola, resterebbe fuori il bottone */
-@media (max-height:699px){
-  .esempio{display:none}
-}
-
 /* telefono piccolo e corto insieme: ultimi ritocchi per non scorrere */
 @media (max-width:599px) and (max-height:700px){
   .schermata{padding:14px 22px calc(10px + env(safe-area-inset-bottom))}
@@ -322,6 +316,43 @@ var zone = {
     errore.hidden = true;
     window.open(zone[menu.value].link, '_blank', 'noopener');
   });
+})();
+
+/* ================================================================
+   LA CARD DI ESEMPIO STA SOLO SE C'E' SPAZIO
+
+   Invece di indovinare una soglia in pixel, misura quanto e' alto
+   davvero il contenuto della prima schermata e lo confronta con la
+   finestra. Rifa il conto a ogni cambio di altezza, per esempio
+   quando la barra del browser compare o sparisce scorrendo.
+   ================================================================ */
+(function () {
+  var schermata = document.querySelector('.schermata');
+  var contenuto = schermata && schermata.querySelector('.wrap');
+  var esempio = document.querySelector('.esempio');
+  if (!schermata || !contenuto || !esempio) return;
+
+  var ultimaAltezza = -1, ultimaLarghezza = -1;
+
+  function adatta() {
+    esempio.hidden = false; // parto sempre dal caso completo, poi misuro
+    var stile = getComputedStyle(schermata);
+    var bordi = parseFloat(stile.paddingTop) + parseFloat(stile.paddingBottom);
+    var serve = contenuto.getBoundingClientRect().height + bordi;
+    if (serve > window.innerHeight) esempio.hidden = true;
+  }
+
+  function seCambia() {
+    // solo quando la finestra cambia davvero, per non rimbalzare
+    if (window.innerHeight === ultimaAltezza && window.innerWidth === ultimaLarghezza) return;
+    ultimaAltezza = window.innerHeight;
+    ultimaLarghezza = window.innerWidth;
+    adatta();
+  }
+
+  seCambia();
+  window.addEventListener('resize', seCambia);
+  window.addEventListener('orientationchange', seCambia);
 })();
 </script>
 
