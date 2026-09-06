@@ -191,6 +191,12 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   .sottotitolo{margin-top:8px}
   #credibilita{margin-top:8px}
   .nota.app{margin-top:6px}
+  /* card piu stretta: cosi ci sta anche su schermi da 690px scarsi */
+  .esempio{margin-top:8px;padding:8px 14px}
+  .esempio .negozio{margin-top:5px}
+  .esempio .offerta{margin-top:6px}
+  .scelta{margin-top:12px}
+  .cta{margin-top:8px}
 }
 
 @media (min-height:721px){
@@ -341,9 +347,9 @@ var zone = {
    ================================================================ */
 (function () {
   var schermata = document.querySelector('.schermata');
-  var contenuto = schermata && schermata.querySelector('.wrap');
   var esempio = document.querySelector('.esempio');
-  if (!schermata || !contenuto || !esempio) return;
+  var bottone = document.getElementById('segui');
+  if (!schermata || !esempio || !bottone) return;
 
   var ultimaAltezza = -1, ultimaLarghezza = -1;
 
@@ -351,15 +357,21 @@ var zone = {
 
   function adatta() {
     esempio.hidden = false; // parto sempre dal caso completo, poi misuro
+
+    // quello che conta e' che il bottone si veda senza scorrere: le due
+    // righine sotto possono anche restare appena fuori. Misuro dall'alto
+    // della schermata al fondo del bottone, piu il bordo di sotto.
     var stile = getComputedStyle(schermata);
-    var bordi = parseFloat(stile.paddingTop) + parseFloat(stile.paddingBottom);
-    var serve = contenuto.getBoundingClientRect().height + bordi;
+    var sotto = parseFloat(stile.paddingBottom);
+    var serve = bottone.getBoundingClientRect().bottom
+              - schermata.getBoundingClientRect().top
+              + sotto;
     if (serve > window.innerHeight) esempio.hidden = true;
 
     // TEMPORANEO: mostra i numeri della decisione appena presa
     if (debug) {
       debug.textContent = 'debug: innerHeight=' + window.innerHeight +
-        ' contenuto=' + Math.round(serve) +
+        ' serve=' + Math.round(serve) +
         ' card=' + (esempio.hidden ? 'nascosta' : 'visibile');
     }
   }
