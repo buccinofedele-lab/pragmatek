@@ -144,9 +144,6 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
 
 /* telefoni con lo schermo basso: stringo tutto, deve restare una schermata sola */
 @media (max-height:720px){
-  /* schermo corto: la card di esempio sparisce, cosi bottone e note
-     restano dentro la prima schermata */
-  .esempio{display:none}
   .schermata{padding:20px 22px calc(16px + env(safe-area-inset-bottom))}
   .occhiello{margin-bottom:12px}
   h1{font-size:36px}
@@ -176,6 +173,12 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   .cta{margin-top:10px;padding:19px 24px}
   .nota{margin-top:6px}
   .nota.app{margin-top:8px}
+}
+
+/* solo sugli schermi davvero bassi la card sparisce: sotto questa
+   altezza, tenendola, resterebbe fuori il bottone */
+@media (max-height:699px){
+  .esempio{display:none}
 }
 
 /* telefono piccolo e corto insieme: ultimi ritocchi per non scorrere */
