@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chi cerca dove mangiare deve trovare te — per ristoranti, pizzerie e bar</title>
+<meta name="description" content="Menu che si legge dal telefono, prenotazioni su WhatsApp, orari veri su Google e recensioni seguite. Tutto a posto in una settimana. 590 euro, una volta sola.">
+<meta name="theme-color" content="#15171B">
+<style>
+:root{
+  --ink:#15171B;        /* scuro: titolo, blocco contatti */
+  --ink-2:#23262C;      /* riquadri dentro le sezioni scure */
+  --panna:#FDF7EF;      /* sfondo caldo delle sezioni chiare */
+  --crema:#F5E9D8;      /* riquadri caldi */
+  --testo:#1B1D21;
+  --testo-chiaro:#5F6670;
+  --accent:#D9530A;     /* arancione: bottoni, numeri, dettagli */
+  --sole:#F9A63F;       /* giallo caldo: blocco intelligenza artificiale */
+  --bordo:#E7DBC8;
+  --bordo-scuro:#33373F;
+  --max:680px;
+  --largo:1000px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--panna);
+  color:var(--testo);
+  font-size:19px;
+  line-height:1.55;
+  padding-bottom:0;
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.wrap-largo{max-width:var(--largo);margin:0 auto;padding:0 22px}
+
+section{padding:58px 0}
+
+h1{font-size:36px;line-height:1.15;letter-spacing:-0.8px;font-weight:800}
+h2{font-size:28px;line-height:1.2;letter-spacing:-0.4px;font-weight:800;margin-bottom:28px}
+h3{font-size:20px;font-weight:700;line-height:1.35}
+p{margin-top:14px}
+
+.occhiello{
+  display:inline-block;font-size:14px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--sole);margin-bottom:18px
+}
+.occhiello.scura{color:var(--accent)}
+
+/* illustrazioni disegnate dentro il file */
+.illo{display:block;width:100%;height:auto}
+.illo text{font-family:inherit}
+.foto{width:100%;height:auto;display:block;border-radius:14px;margin-top:28px}
+
+/* ---------- 1. TITOLO ---------- */
+.hero{background:var(--ink);color:#fff;padding:52px 0 56px}
+.hero h1{color:#fff}
+.hero h1 em{font-style:normal;color:var(--sole)}
+.hero p{font-size:21px;color:#D9DDE3;margin-top:20px}
+.hero .cta{margin-top:30px}
+.hero .telefono{max-width:300px;margin:44px auto 0}
+
+/* ---------- 2. PROBLEMA ---------- */
+.problemi{display:grid;gap:16px;margin-top:8px}
+.scheda{background:#fff;border:1px solid var(--bordo);border-radius:14px;padding:22px}
+.scheda h3{color:var(--testo)}
+.scheda p{margin-top:8px;color:var(--testo-chiaro);font-size:18px}
+.google{margin-top:32px;max-width:360px}
+
+/* ---------- 3. COSA FACCIO ---------- */
+.servizi{background:#fff;border-top:1px solid var(--bordo);border-bottom:1px solid var(--bordo)}
+.lista{list-style:none}
+.lista li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--bordo)}
+.lista li:last-child{border-bottom:none}
+.bollo{
+  flex:0 0 46px;width:46px;height:46px;border-radius:12px;
+  background:var(--crema);display:flex;align-items:center;justify-content:center
+}
+.bollo svg{width:24px;height:24px;color:var(--accent)}
+
+/* ---------- 4. INTELLIGENZA ARTIFICIALE (il blocco più evidente) ---------- */
+.ia{background:var(--sole);color:var(--ink)}
+.ia h2{font-size:30px}
+.ia .punto{display:flex;gap:16px;align-items:flex-start;margin-top:24px}
+.ia .punto svg{flex:0 0 30px;width:30px;height:30px;margin-top:2px;color:var(--ink)}
+.ia .punto p{margin-top:0}
+.ia .chiusura{
+  margin-top:32px;background:var(--ink);color:#fff;
+  border-radius:14px;padding:22px 24px;font-size:19px
+}
+.ia .chiusura strong{color:var(--sole)}
+.ia .contenuti{margin-top:32px;max-width:380px}
+
+/* ---------- 5. PREZZO ---------- */
+.prezzo{text-align:center}
+.cartellino{
+  background:#fff;border:2px solid var(--ink);border-radius:18px;
+  padding:38px 24px;max-width:440px;margin:0 auto
+}
+.cifra{font-size:68px;line-height:1;font-weight:800;letter-spacing:-3px}
+.cifra span{font-size:38px;letter-spacing:-1px}
+.tutto{font-size:21px;font-weight:700;margin-top:14px}
+.riga-accent{width:56px;height:5px;background:var(--accent);border-radius:3px;margin:22px auto}
+.nota{font-size:16px;color:var(--testo-chiaro);margin-top:10px}
+
+/* ---------- 6. COME FUNZIONA ---------- */
+.passi{list-style:none}
+.passi li{display:flex;gap:18px;align-items:flex-start;padding:16px 0}
+.num{
+  flex:0 0 44px;width:44px;height:44px;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:800;font-size:20px;
+  display:flex;align-items:center;justify-content:center
+}
+.passi h3{font-weight:700}
+.tempo{display:block;font-size:16px;color:var(--testo-chiaro);margin-top:4px}
+
+/* ---------- 7. CONTATTO ---------- */
+.contatto{background:var(--ink);color:#fff;text-align:center;padding:64px 0}
+.contatto h2{color:#fff}
+.contatto p{color:#D9DDE3;max-width:460px;margin-left:auto;margin-right:auto}
+
+/* ---------- BOTTONE WHATSAPP ---------- */
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-size:20px;font-weight:700;line-height:1;
+  padding:21px 30px;border-radius:12px;width:100%;max-width:420px
+}
+.cta:active{background:#B94408}
+.cta svg{width:26px;height:26px;flex:0 0 26px}
+
+.barra{
+  position:sticky;bottom:0;z-index:10;
+  background:var(--panna);border-top:1px solid var(--bordo);
+  padding:12px 22px calc(12px + env(safe-area-inset-bottom));text-align:center
+}
+.barra .cta{padding:18px 24px;font-size:19px}
+/* sparisce quando si arriva al blocco finale, per non raddoppiare il bottone */
+.barra.nascosta{display:none}
+/* niente spazio riservato a mano: la barra se lo prende da sola solo in fondo */
+
+footer{padding:26px 0 34px;text-align:center;font-size:15px;color:var(--testo-chiaro)}
+footer a{color:var(--accent);font-weight:700;text-decoration:none}
+
+@media (min-width:760px){
+  body{font-size:20px}
+  h1{font-size:52px}
+  h2{font-size:34px}
+  section{padding:76px 0}
+  .hero{padding:76px 0}
+  .hero-griglia{display:flex;align-items:center;gap:56px}
+  .hero-testo{flex:1 1 auto}
+  .hero .telefono{flex:0 0 300px;margin:0}
+  .hero p{font-size:24px}
+  .problemi{grid-template-columns:1fr 1fr}
+  .problemi .scheda:first-child{grid-column:1 / -1}
+  .ia h2{font-size:38px}
+  .ia-griglia{display:flex;gap:48px;align-items:flex-start}
+  .ia .contenuti{flex:0 0 340px;margin-top:0}
+  .cifra{font-size:84px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. TITOLO ============ -->
+<section class="hero">
+  <div class="wrap-largo hero-griglia">
+
+    <div class="hero-testo">
+      <span class="occhiello">Per chi sta in cucina e in sala</span>
+      <h1>Chi cerca dove mangiare deve <em>trovare te</em></h1>
+      <p>Il menu, gli orari, le prenotazioni e le recensioni: tutto a posto, in una settimana. Tu pensa a cucinare.</p>
+      <a class="cta" href="https://wa.me/393514317452">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+    </div>
+
+    <!-- IMMAGINE 1: telefono con la chat che risponde da sola -->
+    <div class="telefono">
+      <svg class="illo" viewBox="0 0 300 400" role="img" aria-label="Telefono con una chat WhatsApp che risponde in automatico">
+        <rect x="4" y="4" width="292" height="392" rx="34" fill="#FDF7EF"/>
+        <rect x="16" y="18" width="268" height="364" rx="24" fill="#ffffff"/>
+        <path d="M16 42a24 24 0 0 1 24-24h220a24 24 0 0 1 24 24v26H16z" fill="#15171B"/>
+        <circle cx="44" cy="44" r="13" fill="#D9530A"/>
+        <rect x="66" y="36" width="104" height="8" rx="4" fill="#ffffff" opacity=".92"/>
+        <rect x="66" y="50" width="66" height="7" rx="3.5" fill="#F9A63F"/>
+
+        <rect x="30" y="86" width="184" height="34" rx="12" fill="#F0EDE8"/>
+        <text x="44" y="108" font-size="13" fill="#1B1D21">Siete aperti stasera?</text>
+
+        <rect x="86" y="130" width="184" height="52" rx="12" fill="#FFE0C7"/>
+        <text x="100" y="151" font-size="13" fill="#1B1D21">Sì, fino alle 23.</text>
+        <text x="100" y="170" font-size="13" fill="#1B1D21">Ti tengo un tavolo?</text>
+
+        <rect x="30" y="192" width="204" height="34" rx="12" fill="#F0EDE8"/>
+        <text x="44" y="214" font-size="13" fill="#1B1D21">Quanto costa la margherita?</text>
+
+        <rect x="86" y="236" width="184" height="52" rx="12" fill="#FFE0C7"/>
+        <text x="100" y="257" font-size="13" fill="#1B1D21">6,50 €. Ti mando il</text>
+        <text x="100" y="276" font-size="13" fill="#1B1D21">menù completo?</text>
+
+        <rect x="30" y="302" width="240" height="30" rx="15" fill="#F9A63F"/>
+        <text x="150" y="322" font-size="12.5" font-weight="700" fill="#15171B" text-anchor="middle">Risposta in 2 secondi, anche di notte</text>
+
+        <rect x="30" y="346" width="196" height="30" rx="15" fill="#F0EDE8"/>
+        <circle cx="252" cy="361" r="15" fill="#D9530A"/>
+        <path d="M246 361h12M253 356l5 5-5 5" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- FOTO (facoltativa): al posto del telefono qui sopra puoi mettere una foto della sala o di un piatto, circa 900x1100.
+         <img class="foto" src="foto-hero.jpg" alt=""> -->
+
+  </div>
+</section>
+
+<!-- ============ 2. IL PROBLEMA ============ -->
+<section>
+  <div class="wrap">
+    <span class="occhiello scura">Ti riconosci?</span>
+    <h2>Tre cose che ti stanno costando clienti</h2>
+
+    <div class="problemi">
+      <div class="scheda">
+        <h3>"Il menu è un PDF che dal telefono non si legge"</h3>
+        <p>Chi deve decidere dove mangiare guarda il menu. Se deve ingrandire con le dita, chiude e va da un altro.</p>
+      </div>
+      <div class="scheda">
+        <h3>"Il telefono squilla proprio mentre siamo sotto"</h3>
+        <p>Alle otto di sera nessuno può rispondere. E chi non trova posto al telefono prenota altrove.</p>
+      </div>
+      <div class="scheda">
+        <h3>"Le recensioni le leggo e basta, non rispondo mai"</h3>
+        <p>Una recensione brutta senza risposta pesa il doppio. Una bella a cui rispondi ne porta altre.</p>
+      </div>
+    </div>
+
+    <!-- IMMAGINE 2: come ti vede chi ti cerca su Google -->
+    <div class="google">
+      <svg class="illo" viewBox="0 0 340 236" role="img" aria-label="Ricerca su Google con la scheda dell'attività">
+        <defs>
+          <path id="stella" d="M7 0l2 4.4 4.9.6-3.6 3.3.9 4.8L7 10.8 2.8 13.1l.9-4.8L.1 5l4.9-.6z"/>
+        </defs>
+        <rect x="0" y="0" width="340" height="48" rx="24" fill="#ffffff" stroke="#E7DBC8" stroke-width="2"/>
+        <circle cx="30" cy="24" r="8" fill="none" stroke="#5F6670" stroke-width="2.5"/>
+        <path d="M36 30l6 6" stroke="#5F6670" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="56" y="29" font-size="15" fill="#5F6670">pizzeria aperta adesso</text>
+
+        <rect x="0" y="64" width="340" height="172" rx="16" fill="#ffffff" stroke="#E7DBC8" stroke-width="2"/>
+        <rect x="20" y="86" width="52" height="52" rx="10" fill="#F5E9D8"/>
+        <path d="M46 100l10 18H36z" fill="#D9530A"/>
+        <circle cx="40" cy="99" r="4" fill="#F9A63F"/>
+
+        <text x="88" y="100" font-size="17" font-weight="700" fill="#1B1D21">La tua attività</text>
+        <g fill="#D9530A">
+          <use href="#stella" x="88" y="110"/>
+          <use href="#stella" x="106" y="110"/>
+          <use href="#stella" x="124" y="110"/>
+          <use href="#stella" x="142" y="110"/>
+          <use href="#stella" x="160" y="110"/>
+        </g>
+        <text x="184" y="121" font-size="13.5" fill="#5F6670">4,9 · 87 recensioni</text>
+        <text x="88" y="141" font-size="13.5" fill="#1B7A3E" font-weight="700">Aperto ora</text>
+        <text x="170" y="141" font-size="13.5" fill="#5F6670">· chiude alle 23</text>
+
+        <rect x="20" y="164" width="112" height="40" rx="20" fill="#D9530A"/>
+        <text x="76" y="189" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Chiama</text>
+        <rect x="142" y="164" width="140" height="40" rx="20" fill="#ffffff" stroke="#E7DBC8" stroke-width="2"/>
+        <text x="212" y="189" font-size="14" font-weight="700" fill="#1B1D21" text-anchor="middle">Indicazioni</text>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 3. COSA FACCIO IO ============ -->
+<section class="servizi">
+  <div class="wrap">
+    <span class="occhiello scura">Cosa faccio io</span>
+    <h2>Tutto quello che ti serve, fatto da me</h2>
+
+    <ul class="lista">
+      <li>
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 22h8"/></svg></span>
+        <span>Il menu online che si legge bene dal telefono, e lo aggiorni quando cambi i piatti.</span>
+      </li>
+      <li>
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+        <span>Le prenotazioni arrivano su WhatsApp, così le guardi quando hai un minuto invece di rispondere al telefono durante il servizio.</span>
+      </li>
+      <li>
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span>La tua scheda su Google sistemata: orari veri, anche quelli dei festivi e delle chiusure.</span>
+      </li>
+      <li>
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-3.5L5 21V5a2 2 0 0 1 2-2z"/><path d="M9 9h6"/></svg></span>
+        <span>Le foto dei piatti messe come si deve, che è la prima cosa che guarda chi decide dove mangiare.</span>
+      </li>
+      <li>
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+        <span>Un giro di richieste di recensione ai clienti abituali, e le risposte alle recensioni già pronte.</span>
+      </li>
+    </ul>
+
+    <!-- FOTO (facoltativa): una foto dei piatti o del locale pieno, circa 1200x700.
+         <img class="foto" src="foto-lavoro.jpg" alt=""> -->
+  </div>
+</section>
+
+<!-- ============ 4. INTELLIGENZA ARTIFICIALE (blocco in evidenza) ============ -->
+<section class="ia">
+  <div class="wrap">
+    <div class="ia-griglia">
+
+      <div>
+        <h2>L'intelligenza artificiale risponde per te</h2>
+
+        <div class="punto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-4.2-7.3"/><path d="M3.5 20.5l1.2-3.6"/><path d="M9 12h.01M12.5 12h.01M16 12h.01"/></svg>
+          <p>Le domande di sempre — siete aperti stasera, avete posto per sei, avete cose senza glutine, dove si parcheggia — hanno già una risposta pronta che parte da sola su WhatsApp.</p>
+        </div>
+
+        <div class="punto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.9 4.4L17 9l-4.1 1.6L11 15l-1.9-4.4L5 9l4.1-1.6z"/><path d="M18 14.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg>
+          <p>Le risposte alle recensioni e i post per i social te li prepara già scritti. Tu leggi e mandi.</p>
+        </div>
+
+        <p class="chiusura">È anche il motivo per cui costa poco e te lo consegno in una settimana. <strong>Quello che un'agenzia fa in due mesi, io lo faccio in pochi giorni.</strong></p>
+      </div>
+
+      <!-- IMMAGINE 3: i post e le risposte alle recensioni -->
+      <div class="contenuti">
+        <svg class="illo" viewBox="0 0 340 280" role="img" aria-label="Post e risposte alle recensioni già scritti">
+          <rect x="0" y="0" width="340" height="280" rx="18" fill="#15171B"/>
+          <text x="24" y="40" font-size="16" font-weight="700" fill="#ffffff">Post e recensioni</text>
+          <text x="24" y="62" font-size="13.5" fill="#F9A63F">già scritti: tu leggi e mandi</text>
+
+          <g>
+            <rect x="24" y="80" width="88" height="88" rx="12" fill="#23262C"/>
+            <circle cx="52" cy="106" r="9" fill="#F9A63F"/>
+            <path d="M34 150l20-22 16 18 10-10 12 14z" fill="#D9530A"/>
+
+            <rect x="126" y="80" width="88" height="88" rx="12" fill="#23262C"/>
+            <rect x="140" y="98" width="60" height="8" rx="4" fill="#ffffff" opacity=".85"/>
+            <rect x="140" y="114" width="46" height="7" rx="3.5" fill="#ffffff" opacity=".45"/>
+            <rect x="140" y="130" width="54" height="7" rx="3.5" fill="#ffffff" opacity=".45"/>
+            <rect x="140" y="146" width="34" height="7" rx="3.5" fill="#F9A63F"/>
+
+            <rect x="228" y="80" width="88" height="88" rx="12" fill="#D9530A"/>
+            <text x="272" y="122" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Piatto</text>
+            <text x="272" y="142" font-size="13" fill="#ffffff" text-anchor="middle">del giorno</text>
+
+            <rect x="24" y="180" width="88" height="66" rx="12" fill="#23262C"/>
+            <rect x="38" y="198" width="60" height="7" rx="3.5" fill="#ffffff" opacity=".45"/>
+            <rect x="38" y="212" width="44" height="7" rx="3.5" fill="#ffffff" opacity=".45"/>
+            <rect x="38" y="226" width="52" height="7" rx="3.5" fill="#ffffff" opacity=".25"/>
+
+            <rect x="126" y="180" width="88" height="66" rx="12" fill="#23262C"/>
+            <circle cx="170" cy="213" r="18" fill="none" stroke="#F9A63F" stroke-width="3"/>
+            <path d="M164 205l14 8-14 8z" fill="#F9A63F"/>
+
+            <rect x="228" y="180" width="88" height="66" rx="12" fill="#23262C"/>
+            <text x="272" y="220" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">+7</text>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. PREZZO ============ -->
+<section class="prezzo">
+  <div class="wrap">
+    <div class="cartellino">
+      <div class="cifra">590<span> €</span></div>
+      <div class="tutto">Tutto compreso, una volta sola.</div>
+      <div class="riga-accent"></div>
+      <p class="nota">90 € al mese se vuoi che continui a seguirtelo, con le recensioni e i contenuti nuovi. Facoltativo, se ne parla dopo.</p>
+      <p class="nota">Nessun costo nascosto, il sito è tuo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. COME FUNZIONA ============ -->
+<section class="servizi">
+  <div class="wrap">
+    <span class="occhiello scura">Come funziona</span>
+    <h2>Tre passi, e sei online</h2>
+
+    <ul class="passi">
+      <li>
+        <span class="num">1</span>
+        <span>
+          <h3>Ci sentiamo mezz'ora, magari al pomeriggio quando siete chiusi.</h3>
+        </span>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <span>
+          <h3>Ti preparo tutto io.</h3>
+          <span class="tempo">Una settimana, e tu non devi fare niente</span>
+        </span>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <span>
+          <h3>Ci vediamo, ti consegno e ti spiego come usarlo.</h3>
+          <span class="tempo">Mezz'ora insieme, poi vai da solo</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 7. CONTATTO ============ -->
+<section class="contatto">
+  <div class="wrap">
+    <h2>Parliamone</h2>
+    <p>Scrivimi che locale hai e come prendi le prenotazioni adesso. Ti rispondo io, senza impegno.</p>
+    <p>
+      <a class="cta" href="https://wa.me/393514317452">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong><a href="index.html">Pragmatek</a> — Fedele Buccino</strong>
+  </div>
+</footer>
+
+<!-- bottone WhatsApp sempre visibile in basso -->
+<div class="barra">
+  <a class="cta" href="https://wa.me/393514317452">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+    Scrivimi su WhatsApp
+  </a>
+</div>
+
+<script>
+/* nasconde il bottone fisso quando si vede il blocco finale "Parliamone" */
+(function(){
+  var barra = document.querySelector('.barra');
+  var finale = document.querySelector('.contatto');
+  if(!barra || !finale || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(voci){
+    barra.classList.toggle('nascosta', voci[0].isIntersecting);
+  }).observe(finale);
+})();
+</script>
+
+</body>
+</html>

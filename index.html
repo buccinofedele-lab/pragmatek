@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pragmatek — tecnologia semplice per chi lavora tutti i giorni</title>
+<meta name="description" content="Porto la tecnologia dentro le attività vere. Non vendo tecnologia, risolvo problemi concreti: se una cosa non ti serve, te lo dico. Aziende con un ufficio, artigiani, negozi e locali.">
+<meta name="theme-color" content="#15171B">
+<style>
+/* Stessi colori, stesso font e stessi bottoni di attivita.html. */
+:root{
+  --ink:#15171B;
+  --ink-2:#1D2026;
+  --ink-3:#282C34;
+  --panna:#FDF7EF;
+  --crema:#F5E9D8;
+  --testo:#1B1D21;
+  --testo-chiaro:#5F6670;
+  --accent:#D9530A;
+  --sole:#F9A63F;
+  --bordo:#E7DBC8;
+  --bordo-scuro:#33373F;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;
+  --max:680px;
+  --largo:1040px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--panna);
+  color:var(--testo);
+  font-size:19px;
+  line-height:1.55;
+  padding-bottom:0;
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.wrap-largo{max-width:var(--largo);margin:0 auto;padding:0 22px}
+
+section{padding:58px 0}
+
+h1{font-size:44px;line-height:1.1;letter-spacing:-1.4px;font-weight:800}
+h2{font-size:28px;line-height:1.2;letter-spacing:-0.4px;font-weight:800;margin-bottom:10px}
+h3{font-size:20px;font-weight:700;line-height:1.35}
+p{margin-top:14px}
+.intro{color:var(--testo-chiaro);font-size:19px;margin:0 0 30px}
+
+/* etichetta piccola in stile "tech" */
+.tag{
+  display:inline-block;font-family:var(--mono);font-size:13px;font-weight:700;
+  letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);margin-bottom:16px
+}
+.tag.chiara{color:var(--sole)}
+
+.illo{display:block;width:100%;height:auto}
+.illo text{font-family:inherit}
+
+/* ---------- 1. APERTURA ---------- */
+.hero{
+  background-color:var(--ink);color:#fff;padding:56px 0 60px;
+  background-image:radial-gradient(rgba(255,255,255,.09) 1px, transparent 1px);
+  background-size:24px 24px
+}
+.hero h1{color:#fff}
+.hero .sottotitolo{font-size:21px;color:#D9DDE3;margin-top:20px}
+.hero .secche{
+  margin-top:26px;padding-top:22px;border-top:1px solid var(--bordo-scuro);font-size:19px
+}
+.hero .secche strong{color:var(--sole)}
+.hero .cta{margin-top:26px}
+.hero .sotto-bottone{font-size:16px;color:#9AA2AD;margin-top:14px}
+.hero .schermo{margin-top:44px}
+
+/* ---------- 2. TRE FATTI ---------- */
+.fatti{background:var(--ink-2);color:#fff;padding:0}
+.fatti-griglia{display:grid;gap:0}
+.fatto{padding:26px 0;border-bottom:1px solid var(--bordo-scuro)}
+.fatto:last-child{border-bottom:none}
+.fatto .numero{font-family:var(--mono);font-size:14px;color:var(--sole);letter-spacing:1.2px}
+.fatto h3{margin-top:8px}
+.fatto p{margin-top:6px;color:#B7BEC7;font-size:18px}
+
+/* ---------- 3. COME LA PENSO ---------- */
+.pensiero{background:var(--sole);color:var(--ink)}
+.pensiero .punto{display:flex;gap:16px;align-items:flex-start;margin-top:26px}
+.pensiero .punto svg{flex:0 0 30px;width:30px;height:30px;margin-top:2px;color:var(--ink)}
+.pensiero .punto h3{margin-bottom:4px}
+.pensiero .punto p{margin-top:0}
+
+/* ---------- 4. COSA FACCIO IN PRATICA ---------- */
+.bianca{background:#fff;border-top:1px solid var(--bordo);border-bottom:1px solid var(--bordo)}
+.cose{display:grid;gap:16px;margin-top:26px}
+.cosa{background:var(--panna);border:1px solid var(--bordo);border-radius:14px;padding:22px}
+.cosa .bollo{
+  width:46px;height:46px;border-radius:12px;background:var(--crema);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px
+}
+.cosa .bollo svg{width:24px;height:24px;color:var(--accent)}
+.cosa p{margin-top:8px;color:var(--testo-chiaro);font-size:18px}
+
+/* ---------- 5. PRIMA E DOPO ---------- */
+.confronto{display:grid;gap:16px;margin-top:26px}
+.colonna{border-radius:14px;padding:24px}
+.colonna.prima{background:#fff;border:1px solid var(--bordo)}
+.colonna.dopo{background:var(--ink);color:#fff}
+.colonna h3{margin-bottom:14px}
+.colonna ul{list-style:none}
+.colonna li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:18px}
+.colonna li svg{flex:0 0 22px;width:22px;height:22px;margin-top:3px}
+.colonna.prima li{color:var(--testo-chiaro)}
+.colonna.prima li svg{color:#B9BFC7}
+.colonna.dopo li svg{color:var(--sole)}
+
+/* ---------- 6. PER CHI LAVORO ---------- */
+.segmenti{display:grid;gap:16px;margin-top:26px}
+.segmento{
+  display:block;text-decoration:none;color:var(--testo);
+  background:#fff;border:1px solid var(--bordo);border-radius:14px;padding:24px
+}
+.segmento:hover,.segmento:active{border-color:var(--accent)}
+.segmento .disegno{background:var(--crema);border-radius:12px;padding:14px;margin-bottom:16px}
+.segmento p{color:var(--testo-chiaro);font-size:18px;margin-top:10px}
+.scopri{
+  display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+  color:var(--accent);font-weight:700;font-size:18px
+}
+.scopri svg{width:20px;height:20px}
+
+/* ---------- 7. COME LAVORO ---------- */
+.passi{list-style:none;margin-top:26px}
+.passi li{display:flex;gap:18px;align-items:flex-start;position:relative;padding:0 0 26px}
+.passi li:last-child{padding-bottom:0}
+.passi li::before{
+  content:"";position:absolute;left:21px;top:48px;bottom:4px;width:2px;background:var(--bordo)
+}
+.passi li:last-child::before{display:none}
+.num{
+  flex:0 0 44px;width:44px;height:44px;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:800;font-size:20px;
+  display:flex;align-items:center;justify-content:center;position:relative;z-index:1
+}
+.passi p{margin-top:4px;color:var(--testo-chiaro);font-size:18px}
+
+/* ---------- 8. DOMANDE ---------- */
+.domanda{border-top:1px solid var(--bordo);padding:22px 0}
+.domanda:last-child{border-bottom:1px solid var(--bordo)}
+.domanda p{margin-top:8px;color:var(--testo-chiaro);font-size:18px}
+
+/* ---------- 9. CONTATTO ---------- */
+.contatto{
+  background-color:var(--ink);color:#fff;text-align:center;padding:64px 0;
+  background-image:radial-gradient(rgba(255,255,255,.09) 1px, transparent 1px);
+  background-size:24px 24px
+}
+.contatto h2{color:#fff}
+.contatto p{color:#D9DDE3;max-width:460px;margin-left:auto;margin-right:auto}
+
+/* ---------- BOTTONE WHATSAPP ---------- */
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-size:20px;font-weight:700;line-height:1;
+  padding:21px 30px;border-radius:12px;width:100%;max-width:420px
+}
+.cta:active{background:#B94408}
+.cta svg{width:26px;height:26px;flex:0 0 26px}
+
+.barra{
+  position:sticky;bottom:0;z-index:10;
+  background:var(--panna);border-top:1px solid var(--bordo);
+  padding:12px 22px calc(12px + env(safe-area-inset-bottom));text-align:center
+}
+.barra .cta{padding:18px 24px;font-size:19px}
+/* sparisce quando si arriva al blocco finale, per non raddoppiare il bottone */
+.barra.nascosta{display:none}
+/* niente spazio riservato a mano: la barra se lo prende da sola solo in fondo */
+
+footer{padding:26px 0 34px;text-align:center;font-size:15px;color:var(--testo-chiaro)}
+footer a{color:var(--accent);font-weight:700;text-decoration:none}
+
+@media (min-width:760px){
+  body{font-size:20px}
+  h1{font-size:70px;letter-spacing:-2.5px}
+  h2{font-size:34px}
+  section{padding:80px 0}
+  .hero{padding:80px 0}
+  .hero-griglia{display:flex;align-items:center;gap:56px}
+  .hero-testo{flex:1 1 auto}
+  .hero .schermo{flex:0 0 400px;margin-top:0}
+  .hero .sottotitolo{font-size:24px}
+  .fatti-griglia{grid-template-columns:repeat(3,1fr);gap:32px}
+  .fatto{border-bottom:none;padding:34px 0}
+  .cose{grid-template-columns:1fr 1fr}
+  .confronto{grid-template-columns:1fr 1fr}
+  .segmenti{grid-template-columns:repeat(2,1fr)}
+  .segmento{display:flex;flex-direction:column}
+  .segmento .scopri{margin-top:auto;padding-top:18px}
+  .intro{font-size:21px;max-width:620px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. APERTURA ============ -->
+<section class="hero">
+  <div class="wrap-largo hero-griglia">
+
+    <div class="hero-testo">
+      <span class="tag chiara">Tecnologia semplice</span>
+      <h1>Pragmatek</h1>
+      <p class="sottotitolo">Porto la tecnologia dentro le attività vere, quelle che lavorano tutti i giorni.</p>
+      <p class="secche">
+        <strong>Non vendo tecnologia, risolvo problemi concreti.</strong><br>
+        Se una cosa non ti serve, te lo dico.
+      </p>
+      <a class="cta" href="https://wa.me/393514317452">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+      <p class="sotto-bottone">Rispondo io, in giornata.</p>
+    </div>
+
+    <!-- IMMAGINE 1: il tuo lavoro tutto in una schermata -->
+    <div class="schermo">
+      <svg class="illo" viewBox="0 0 400 320" role="img" aria-label="Una schermata con i numeri del lavoro, i messaggi e i preventivi">
+        <rect x="0" y="0" width="400" height="320" rx="18" fill="#1D2026" stroke="#33373F" stroke-width="2"/>
+        <path d="M0 18a18 18 0 0 1 18-18h364a18 18 0 0 1 18 18v26H0z" fill="#282C34"/>
+        <circle cx="24" cy="22" r="5" fill="#D9530A"/>
+        <circle cx="42" cy="22" r="5" fill="#F9A63F"/>
+        <circle cx="60" cy="22" r="5" fill="#4A5058"/>
+        <rect x="86" y="16" width="150" height="12" rx="6" fill="#33373F"/>
+
+        <!-- tre riquadri con i numeri -->
+        <rect x="20" y="62" width="112" height="66" rx="12" fill="#282C34"/>
+        <text x="36" y="90" font-size="24" font-weight="800" fill="#F9A63F">28</text>
+        <text x="36" y="112" font-size="12" fill="#9AA2AD">richieste</text>
+
+        <rect x="144" y="62" width="112" height="66" rx="12" fill="#282C34"/>
+        <text x="160" y="90" font-size="24" font-weight="800" fill="#ffffff">12</text>
+        <text x="160" y="112" font-size="12" fill="#9AA2AD">preventivi</text>
+
+        <rect x="268" y="62" width="112" height="66" rx="12" fill="#D9530A"/>
+        <text x="284" y="90" font-size="24" font-weight="800" fill="#ffffff">9</text>
+        <text x="284" y="112" font-size="12" fill="#FFD9BF">lavori presi</text>
+
+        <!-- grafico a barre -->
+        <rect x="20" y="146" width="236" height="150" rx="12" fill="#282C34"/>
+        <text x="36" y="172" font-size="12" fill="#9AA2AD">come va il mese</text>
+        <rect x="36" y="238" width="26" height="40" rx="5" fill="#4A5058"/>
+        <rect x="74" y="222" width="26" height="56" rx="5" fill="#4A5058"/>
+        <rect x="112" y="204" width="26" height="74" rx="5" fill="#F9A63F"/>
+        <rect x="150" y="216" width="26" height="62" rx="5" fill="#4A5058"/>
+        <rect x="188" y="188" width="26" height="90" rx="5" fill="#D9530A"/>
+        <rect x="226" y="196" width="26" height="82" rx="5" fill="#4A5058"/>
+
+        <!-- messaggio che parte da solo -->
+        <rect x="268" y="146" width="112" height="70" rx="12" fill="#282C34"/>
+        <circle cx="292" cy="170" r="10" fill="#D9530A"/>
+        <rect x="308" y="164" width="52" height="7" rx="3.5" fill="#ffffff" opacity=".8"/>
+        <rect x="284" y="188" width="76" height="7" rx="3.5" fill="#ffffff" opacity=".35"/>
+        <rect x="284" y="200" width="54" height="7" rx="3.5" fill="#F9A63F"/>
+
+        <!-- preventivo pronto -->
+        <rect x="268" y="226" width="112" height="70" rx="12" fill="#282C34"/>
+        <path d="M284 262l10 10 20-22" fill="none" stroke="#F9A63F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="284" y="282" width="80" height="7" rx="3.5" fill="#ffffff" opacity=".35"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 2. TRE FATTI ============ -->
+<section class="fatti">
+  <div class="wrap-largo fatti-griglia">
+    <div class="fatto">
+      <span class="numero">01</span>
+      <h3>Prezzi scritti prima</h3>
+      <p>Sai quanto spendi prima che io cominci.</p>
+    </div>
+    <div class="fatto">
+      <span class="numero">02</span>
+      <h3>Tempi corti</h3>
+      <p>Quasi sempre finisco in una settimana.</p>
+    </div>
+    <div class="fatto">
+      <span class="numero">03</span>
+      <h3>Poi vai da solo</h3>
+      <p>Ti spiego tutto. Non resti legato a me.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. COME LA PENSO ============ -->
+<section class="pensiero">
+  <div class="wrap">
+    <span class="tag">Come la penso</span>
+    <h2>Tre cose che faccio sempre</h2>
+
+    <div class="punto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/><path d="M11 8v4"/><path d="M11 14.5h.01"/></svg>
+      <div>
+        <h3>Prima il problema, poi lo strumento.</h3>
+        <p>Non parto da cosa esiste, parto da cosa ti fa perdere tempo o clienti.</p>
+      </div>
+    </div>
+
+    <div class="punto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h9M4 18h6"/><path d="M14.5 17l2.5 2.5 5-5.5"/></svg>
+      <div>
+        <h3>Deve essere semplice da usare, altrimenti resta lì.</h3>
+        <p>Ti lascio cose che sai usare anche quando io non ci sono.</p>
+      </div>
+    </div>
+
+    <div class="punto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4v4l5-4h7a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z"/><path d="M8 9h8M8 12.5h5"/></svg>
+      <div>
+        <h3>Parlo chiaro.</h3>
+        <p>Niente parole difficili, niente preventivi che non si capiscono, prezzi scritti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. COSA FACCIO IN PRATICA ============ -->
+<section class="bianca">
+  <div class="wrap-largo">
+    <span class="tag">In pratica</span>
+    <h2>Cosa ti tolgo dalle mani</h2>
+    <p class="intro">Quattro cose che mi chiedono quasi tutti.</p>
+
+    <div class="cose">
+      <div class="cosa">
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-4.2-7.3"/><path d="M3.5 20.5l1.2-3.6"/><path d="M9 12h.01M12.5 12h.01M16 12h.01"/></svg></span>
+        <h3>Rispondere ai messaggi</h3>
+        <p>Le domande di sempre hanno già una risposta pronta, che parte da sola.</p>
+      </div>
+
+      <div class="cosa">
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+        <h3>Preparare i preventivi</h3>
+        <p>Quello che rifai a mano ogni volta si prepara quasi da solo.</p>
+      </div>
+
+      <div class="cosa">
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+        <h3>Farti trovare</h3>
+        <p>Chi cerca quello che fai tu, ti trova. Oggi magari trova un altro.</p>
+      </div>
+
+      <div class="cosa">
+        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+        <h3>Mettere in ordine i numeri</h3>
+        <p>Vedi come sta andando il lavoro senza aprire dieci fogli.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. PRIMA E DOPO ============ -->
+<section>
+  <div class="wrap-largo">
+    <span class="tag">Prima e dopo</span>
+    <h2>Cosa cambia davvero</h2>
+
+    <div class="confronto">
+
+      <div class="colonna prima">
+        <h3>Come va adesso</h3>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>Rispondi ai messaggi la sera tardi, quando sei stanco.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>Il preventivo lo rifai da capo ogni volta.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>I numeri sono sparsi su fogli e quaderni.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>Chi ti cerca online non ti trova.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="colonna dopo">
+        <h3>Come può andare</h3>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l5 5L19 6.5"/></svg>
+            <span>Le domande di sempre hanno risposta subito, anche di notte.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l5 5L19 6.5"/></svg>
+            <span>Il preventivo esce in pochi minuti.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l5 5L19 6.5"/></svg>
+            <span>I numeri stanno in un posto solo, e si capiscono.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l5 5L19 6.5"/></svg>
+            <span>Chi ti cerca ti trova, e ti scrive.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. PER CHI LAVORO ============ -->
+<section class="bianca">
+  <div class="wrap-largo">
+    <span class="tag">Per chi lavoro</span>
+    <h2>Scegli il tuo tipo di attività</h2>
+    <p class="intro">Quattro pagine, una per ognuno. Apri la tua.</p>
+
+    <div class="segmenti">
+
+      <!-- RIQUADRO A — pmi.html non esiste ancora -->
+      <a class="segmento" href="pmi.html">
+        <div class="disegno">
+          <svg class="illo" viewBox="0 0 200 96" role="img" aria-label="Scrivania con documenti e schermo">
+            <rect x="14" y="16" width="86" height="60" rx="8" fill="#ffffff" stroke="#E7DBC8" stroke-width="2"/>
+            <rect x="26" y="28" width="46" height="7" rx="3.5" fill="#D9530A"/>
+            <rect x="26" y="42" width="60" height="6" rx="3" fill="#E7DBC8"/>
+            <rect x="26" y="54" width="40" height="6" rx="3" fill="#E7DBC8"/>
+            <rect x="112" y="26" width="74" height="46" rx="8" fill="#15171B"/>
+            <rect x="124" y="38" width="34" height="6" rx="3" fill="#F9A63F"/>
+            <rect x="124" y="50" width="50" height="5" rx="2.5" fill="#ffffff" opacity=".4"/>
+            <rect x="124" y="60" width="30" height="5" rx="2.5" fill="#ffffff" opacity=".25"/>
+          </svg>
+        </div>
+        <h3>Aziende con un ufficio</h3>
+        <p>Preventivi, ordini, report: le cose che qualcuno rifà a mano ogni settimana.</p>
+        <span class="scopri">Scopri di più
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- RIQUADRO B — artigiani.html non esiste ancora -->
+      <a class="segmento" href="artigiani.html">
+        <div class="disegno">
+          <svg class="illo" viewBox="0 0 200 96" role="img" aria-label="Attrezzi da lavoro e metro">
+            <rect x="14" y="20" width="172" height="56" rx="10" fill="#ffffff" stroke="#E7DBC8" stroke-width="2"/>
+            <path d="M52 38a12 12 0 0 0-14 15l-9 9 7 7 9-9a12 12 0 0 0 15-14l-7 7-8-8z" fill="#D9530A"/>
+            <rect x="86" y="40" width="86" height="18" rx="5" fill="#15171B"/>
+            <path d="M96 40v8M108 40v11M120 40v8M132 40v11M144 40v8M156 40v11" stroke="#F9A63F" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Artigiani e imprese tecniche</h3>
+        <p>Serramentisti, impiantisti, edilizia, officine. Preventivi più veloci e nessun cliente che si perde per strada.</p>
+        <span class="scopri">Scopri di più
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- RIQUADRO C — pagina già pronta -->
+      <a class="segmento" href="attivita.html">
+        <div class="disegno">
+          <svg class="illo" viewBox="0 0 200 96" role="img" aria-label="Vetrina di un negozio con la tenda">
+            <rect x="30" y="34" width="140" height="46" rx="8" fill="#ffffff" stroke="#E7DBC8" stroke-width="2"/>
+            <path d="M26 34l10-18h128l10 18z" fill="#D9530A"/>
+            <path d="M46 34l6-18M70 34l6-18M94 34l6-18M118 34l6-18M142 34l6-18" stroke="#FFD9BF" stroke-width="3"/>
+            <rect x="46" y="48" width="40" height="26" rx="5" fill="#F5E9D8"/>
+            <rect x="98" y="48" width="26" height="32" rx="4" fill="#15171B"/>
+            <circle cx="140" cy="60" r="10" fill="#F9A63F"/>
+          </svg>
+        </div>
+        <h3>Negozi e attività</h3>
+        <p>Estetiste, parrucchieri, palestre, negozi. Farti trovare da chi ti cerca qui intorno.</p>
+        <span class="scopri">Scopri di più
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- RIQUADRO D — ristorazione -->
+      <a class="segmento" href="ristorazione.html">
+        <div class="disegno">
+          <svg class="illo" viewBox="0 0 200 96" role="img" aria-label="Un piatto e un messaggio di prenotazione">
+            <rect x="14" y="20" width="172" height="56" rx="10" fill="#ffffff" stroke="#E7DBC8" stroke-width="2"/>
+            <circle cx="60" cy="48" r="22" fill="#F5E9D8"/>
+            <circle cx="60" cy="48" r="11" fill="#D9530A"/>
+            <path d="M30 32v10a4 4 0 0 0 8 0V32M34 46v18" fill="none" stroke="#15171B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M88 32c4 2 4 10 0 12v20" fill="none" stroke="#15171B" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="106" y="30" width="68" height="30" rx="8" fill="#15171B"/>
+            <path d="M118 60l-2 8 12-8z" fill="#15171B"/>
+            <rect x="116" y="39" width="40" height="5" rx="2.5" fill="#F9A63F"/>
+            <rect x="116" y="49" width="28" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+          </svg>
+        </div>
+        <h3>Ristoranti, pizzerie e bar</h3>
+        <p>Menu, prenotazioni e recensioni, senza rispondere al telefono durante il servizio.</p>
+        <span class="scopri">Scopri di più
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. COME LAVORO ============ -->
+<section>
+  <div class="wrap">
+    <span class="tag">Come lavoro</span>
+    <h2>Tre passi, senza sorprese</h2>
+
+    <ul class="passi">
+      <li>
+        <span class="num">1</span>
+        <div>
+          <h3>Ci sentiamo e mi racconti come funziona il tuo lavoro.</h3>
+          <p>Mezz'ora. Non devi preparare niente.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div>
+          <h3>Ti dico cosa si può fare e quanto costa, prima di iniziare.</h3>
+          <p>Scritto. Se non ti convince, ci salutiamo lo stesso da amici.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div>
+          <h3>Faccio il lavoro e te lo spiego, così resti autonomo.</h3>
+          <p>Te lo faccio vedere finché non sei tranquillo.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 8. DOMANDE ============ -->
+<section class="bianca">
+  <div class="wrap">
+    <span class="tag">Domande</span>
+    <h2>Quello che mi chiedono sempre</h2>
+
+    <div class="domanda">
+      <h3>Devo capirci qualcosa di computer?</h3>
+      <p>No. Faccio io. Poi ti spiego con parole normali.</p>
+    </div>
+    <div class="domanda">
+      <h3>Quanto costa?</h3>
+      <p>Te lo dico prima, scritto. Nessuna sorpresa alla fine.</p>
+    </div>
+    <div class="domanda">
+      <h3>E se non mi serve?</h3>
+      <p>Te lo dico io. Non ti vendo una cosa che lasci lì dopo un mese.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. CONTATTO ============ -->
+<section class="contatto">
+  <div class="wrap">
+    <h2>Parliamone</h2>
+    <p>Non sai in quale categoria stai? Scrivimi e ne parliamo.</p>
+    <p>
+      <a class="cta" href="https://wa.me/393514317452">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong><a href="index.html">Pragmatek</a> — Fedele Buccino</strong><br>
+    Intelligenza artificiale per le piccole attività
+  </div>
+</footer>
+
+<!-- bottone WhatsApp sempre visibile in basso -->
+<div class="barra">
+  <a class="cta" href="https://wa.me/393514317452">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+    Scrivimi su WhatsApp
+  </a>
+</div>
+
+<script>
+/* nasconde il bottone fisso quando si vede il blocco finale "Parliamone" */
+(function(){
+  var barra = document.querySelector('.barra');
+  var finale = document.querySelector('.contatto');
+  if(!barra || !finale || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(voci){
+    barra.classList.toggle('nascosta', voci[0].isIntersecting);
+  }).observe(finale);
+})();
+</script>
+
+</body>
+</html>
