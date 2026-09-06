@@ -41,6 +41,8 @@ body{
   color:#fff;
   min-height:100vh;
   min-height:100svh;
+  /* sugli schermi alti si accorcia un po': meno nero vuoto sotto il bottone
+     e si intravede la sezione chiara, che invita a scorrere */
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -70,6 +72,8 @@ select{
 }
 select:focus{outline:3px solid var(--sole);outline-offset:1px}
 
+.aiuto{font-size:16px;color:#9AA2AD;margin-top:9px}
+
 .errore{
   margin-top:10px;font-size:19px;font-weight:700;color:var(--sole)
 }
@@ -91,14 +95,19 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
 }
 
 .piede{
-  background:var(--panna);color:var(--testo-chiaro);
-  text-align:center;font-size:16px;padding:0 22px 40px
+  background:var(--ink);color:#6B727B;
+  text-align:center;font-size:16px;
+  padding:26px 22px calc(30px + env(safe-area-inset-bottom))
 }
 
 /* ---------- sezione chiara, si vede scrollando ---------- */
 .spiega{background:var(--panna);color:var(--testo);padding:44px 22px 36px}
 .spiega h2{font-size:24px;font-weight:800;letter-spacing:-0.3px;line-height:1.2}
 .spiega p{font-size:19px;margin-top:14px}
+.spiega .rilievo{
+  margin-top:18px;font-weight:700;padding-left:16px;
+  border-left:4px solid var(--accent)
+}
 .spiega .elenco{list-style:none;margin-top:24px}
 .spiega .elenco li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;font-size:19px}
 .spiega .elenco .n{
@@ -119,6 +128,10 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   .scelta{margin-top:22px}
   .cta{margin-top:14px}
   .nota{margin-top:12px}
+}
+
+@media (min-height:721px){
+  .schermata{min-height:88svh}
 }
 
 @media (min-width:600px){
@@ -145,6 +158,7 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
     <select id="zona">
       <option value="">Scegli…</option>
     </select>
+    <p class="aiuto">Zone piccole apposta: solo negozi davvero vicini tra loro.</p>
     <p class="errore" id="errore" role="alert" hidden>Scegli prima la tua zona</p>
 
     <button type="button" class="cta" id="segui">
@@ -163,6 +177,8 @@ select:focus{outline:3px solid var(--sole);outline-offset:1px}
   <div class="wrap">
     <h2>Perché lo facciamo</h2>
     <p>Ci piace che i negozi del quartiere si facciano conoscere dalle persone che ci vivono vicino. Ogni giorno mettiamo in evidenza un'attività diversa della tua zona, con un'offerta pensata solo per chi segue il canale.</p>
+
+    <p class="rilievo">Scegliamo negozi vicini tra loro apposta: quando vedi l'offerta del giorno, il negozio è sempre a pochi minuti da te — mai dall'altra parte della città.</p>
 
     <ul class="elenco">
       <li><span class="n">1.</span> <span>Ogni giorno tocca a un negozio diverso della tua zona</span></li>
