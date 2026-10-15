@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Solo le pagine pubbliche. circuito.html e grazie.html restano fuori di proposito. -->
+<!-- Solo le pagine pubbliche. circuito.html e grazie.html restano fuori di proposito.
+     Le pagine di segmento (pmi, artigiani, attivita, ristorazione) restano online ma fuori dalla sitemap. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.pragmatek.it/</loc>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.pragmatek.it/attivita.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pragmatek.it/artigiani.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pragmatek.it/pmi.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pragmatek.it/ristorazione.html</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.pragmatek.it/canale.html</loc>
