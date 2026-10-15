@@ -3,204 +3,245 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pragmatek · L’intelligenza artificiale per negozi e attività a Torino</title>
-<meta name="description" content="Tu pensa ai clienti, al resto ci pensa l’intelligenza artificiale. 30 minuti di consulenza gratuita, direttamente nella tua attività a Torino. Scrivimi su WhatsApp.">
+<title>Pragmatek — Intelligenza artificiale per negozi e attività a Torino</title>
+<meta name="description" content="L’intelligenza artificiale fa il lavoro ripetitivo al posto tuo. 30 minuti gratis nella tua attività, a Torino. Prezzi scritti prima, nessun impegno.">
 <link rel="canonical" href="https://www.pragmatek.it/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1733'/%3E%3Ctext x='16' y='23.5' font-family='Helvetica,Arial,sans-serif' font-size='21' font-weight='700' fill='%23F07F1F' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 <meta property="og:title" content="Tu pensa ai clienti. Al resto ci pensa l’intelligenza artificiale.">
-<meta property="og:description" content="30 minuti di consulenza gratuita nella tua attività. Vengo io, nessun costo, nessun impegno. Pragmatek · Torino">
+<meta property="og:description" content="L’intelligenza artificiale fa il lavoro ripetitivo al posto tuo. 30 minuti gratis nella tua attività, a Torino. Prezzi scritti prima, nessun impegno.">
 <meta property="og:url" content="https://www.pragmatek.it/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:image" content="https://www.pragmatek.it/img/og-pragmatek.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Un negoziante sorridente nella sua bottega, accanto al titolo: Tu pensa ai clienti, al resto ci pensa l’intelligenza artificiale.">
+<meta property="og:image:alt" content="Un negoziante al bancone della sua bottega, accanto al titolo: Tu pensa ai clienti, al resto ci pensa l’intelligenza artificiale.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B1733">
-<link rel="preload" as="image" href="img/negoziante-640.webp" imagesrcset="img/negoziante-640.webp 640w, img/negoziante-1200.webp 1200w" imagesizes="(min-width:860px) 460px, calc(100vw - 44px)">
+<link rel="preload" as="image" href="img/hero-bancone-720.webp" imagesrcset="img/hero-bancone-720.webp 720w, img/hero-bancone-1200.webp 1200w" imagesizes="(min-width:900px) 440px, calc(100vw - 44px)">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-/* Colori e stile del pieghevole Pragmatek (stampa 2026). Questi stili valgono solo per la home. */
+/* Stili della sola home. Palette del pieghevole Pragmatek. */
 :root{
   --blu:#0B1733;
-  --blu-2:#14244A;
-  --blu-linea:#2A3A62;
+  --blu-2:#13224A;
+  --blu-linea:#26375E;
   --crema:#F5F0E8;
+  --bianco:#FFFFFF;
   --arancio:#F07F1F;
+  --arancio-chiaro:#F59A4C;
   --arancio-scuro:#D86C10;
-  --arancio-testo:#B95A07;   /* arancio scurito per le scritte su fondo chiaro, leggibile */
-  --bollo:#FFDEC1;
+  --arancio-testo:#B95A07;   /* arancio leggibile su fondo chiaro */
+  --bollo:#FFE6D1;
   --testo:#0B1733;
-  --testo-chiaro:#4A5468;
-  --su-blu:#D5DBE8;
+  --testo-2:#4A5468;
+  --su-blu:#C9D1E2;
   --bordo:#E6DED0;
-  --max:680px;
-  --largo:1080px;
+  --misura:38rem;            /* circa 65 caratteri */
+  --largo:1120px;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 body{
-  font-family:Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  background:var(--crema);
-  color:var(--testo);
-  font-size:18px;
-  line-height:1.55;
+  font-family:Inter,Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  background:var(--bianco);color:var(--testo);
+  font-size:18px;line-height:1.6;
 }
-
 img{display:block;max-width:100%;height:auto}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
-.wrap-largo{max-width:var(--largo);margin:0 auto;padding:0 22px}
+.contenitore{max-width:var(--largo);margin:0 auto;padding:0 22px}
+.misura{max-width:var(--misura)}
+.centro{text-align:center;margin-left:auto;margin-right:auto}
 
-section{padding:56px 0}
+section{padding:72px 0}
 .scura{background:var(--blu);color:#fff}
-.chiara{background:var(--crema)}
-.bianca{background:#fff}
+.crema{background:var(--crema)}
+.bianca{background:var(--bianco)}
 
-h1{font-size:38px;line-height:1.12;letter-spacing:-.8px;font-weight:800}
-h2{font-size:31px;line-height:1.15;letter-spacing:-.5px;font-weight:800}
-h3{font-size:19px;line-height:1.3;font-weight:700}
-p{margin-top:14px}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em}
+h1{font-size:38px;line-height:1.1}
+h2{font-size:32px;line-height:1.15}
+h3{font-size:20px;line-height:1.3;letter-spacing:-.01em}
+p+p{margin-top:16px}
+.testo-sezione p{font-size:19px}
+.scura .testo-sezione p{color:var(--su-blu)}
+.crema .testo-sezione p,.bianca .testo-sezione p{color:var(--testo-2)}
+.testo-sezione p strong{color:inherit}
+.scura .testo-sezione p strong{color:#fff}
+.crema .testo-sezione p strong,.bianca .testo-sezione p strong{color:var(--testo)}
+h2+.testo-sezione,h2+p,h2+.sottotitolo{margin-top:22px}
+
 .evidenza{color:var(--arancio)}
-.chiara .evidenza,.bianca .evidenza{color:var(--arancio-testo)}
-
+.crema .evidenza,.bianca .evidenza{color:var(--arancio-testo)}
 .etichetta{
-  display:block;font-size:14px;font-weight:700;letter-spacing:1px;
-  text-transform:uppercase;color:var(--arancio);margin-bottom:18px
+  display:block;font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--arancio);margin-bottom:20px;line-height:1.5
 }
-.trattino{display:block;width:56px;height:4px;border-radius:2px;background:var(--arancio);margin:22px 0}
+.sottotitolo{font-size:20px;color:var(--testo-2);max-width:var(--misura)}
 
-/* ---------- BOTTONE WHATSAPP ---------- */
+.foto{border-radius:20px;overflow:hidden;background:var(--blu-2)}
+.foto img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- BOTTONE ---------- */
 .cta{
   display:inline-flex;align-items:center;justify-content:center;gap:12px;
   background:var(--arancio);color:var(--blu);text-decoration:none;
-  font-size:20px;font-weight:800;line-height:1.1;
-  padding:20px 26px;border-radius:14px;width:100%;max-width:420px;
-  box-shadow:0 6px 18px rgba(240,127,31,.28)
+  font-size:19px;font-weight:800;line-height:1.15;text-align:center;
+  padding:19px 28px;border-radius:14px;width:100%;max-width:400px;
+  box-shadow:0 8px 24px rgba(240,127,31,.25);transition:background .15s ease, transform .15s ease
 }
-.cta:hover{background:#F48D35}
-.cta:active{background:var(--arancio-scuro)}
+.cta:hover{background:var(--arancio-chiaro)}
+.cta:active{background:var(--arancio-scuro);transform:translateY(1px)}
 .cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.chiara .cta:focus-visible,.bianca .cta:focus-visible{outline-color:var(--blu)}
-.cta svg{width:26px;height:26px;flex:0 0 26px}
-.sotto-cta{font-size:16px;margin-top:12px}
-.scura .sotto-cta{color:var(--su-blu)}
-.chiara .sotto-cta{color:var(--testo-chiaro)}
-.sotto-cta strong{white-space:nowrap}
+.crema .cta:focus-visible,.bianca .cta:focus-visible{outline-color:var(--blu)}
+.cta svg{width:24px;height:24px;flex:0 0 24px}
+.nota-cta{font-size:15px;margin-top:12px}
+.scura .nota-cta{color:var(--su-blu)}
+.crema .nota-cta,.bianca .nota-cta{color:var(--testo-2)}
+
+/* ---------- ANIMAZIONE D'INGRESSO ---------- */
+.js .appare{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+.js .appare.visibile{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .appare{opacity:1;transform:none;transition:none}}
 
 /* ---------- 1. HERO ---------- */
-.hero{padding:40px 0 48px}
-.hero .sottotitolo{font-size:20px;color:var(--su-blu);margin-top:18px}
-.hero .cta{margin-top:26px}
-.hero-foto{position:relative;margin-top:36px}
-.hero-foto img{width:100%;border-radius:16px;aspect-ratio:1200/957;object-fit:cover}
-.bollino{
-  position:absolute;left:14px;right:14px;bottom:-22px;
-  background:var(--arancio);color:var(--blu);border-radius:14px;
-  padding:14px 16px;text-align:center;font-weight:800;font-size:17px;line-height:1.3
-}
+.hero{padding:44px 0 64px}
+.hero h1{margin-bottom:22px}
+.hero .sottotitolo{color:var(--su-blu);font-size:19px}
+.hero .cta{margin-top:30px}
+.hero .foto{margin-top:44px;aspect-ratio:4/5;max-height:560px}
 
-/* ---------- 2. 30 MINUTI GRATIS ---------- */
-.offerta{text-align:center;padding-top:70px}
-.offerta h2{font-size:38px;color:var(--arancio-testo)}
-.offerta .intro{font-size:19px;margin-top:12px}
-.offerta .trattino{margin:24px auto}
-.spunte{list-style:none;display:inline-block;text-align:left}
-.spunte li{display:flex;gap:12px;align-items:center;padding:6px 0;font-size:19px}
-.spunte svg{flex:0 0 22px;width:22px;height:22px;color:var(--arancio-testo)}
-.prenota{margin-top:30px;font-weight:700;font-size:18px}
-.numero{
-  display:inline-block;font-size:34px;font-weight:800;letter-spacing:.5px;
-  color:var(--blu);text-decoration:none;margin:2px 0 18px
-}
+/* ---------- DUE COLONNE (testo + foto) ---------- */
+.coppia{display:grid;gap:40px;align-items:center}
+.coppia .foto{aspect-ratio:4/5;max-height:520px}
+.coppia .foto.larga{aspect-ratio:3/2}
 
-/* ---------- 3. RIPRENDITI IL TUO TEMPO ---------- */
-.tempo{padding-top:0}
-.tempo .foto img{width:100%;aspect-ratio:1000/1047;object-fit:cover;object-position:center 30%;max-height:440px}
-.tempo .testo{padding-top:40px}
-.tempo p{color:var(--su-blu);font-size:19px}
-.tempo p strong{color:#fff}
+/* ---------- 4. COSA FA PER TE ---------- */
+.blocchi{display:grid;gap:18px;margin-top:40px}
+.blocco{background:var(--crema);border-radius:18px;padding:26px}
+.blocco .icona{
+  width:52px;height:52px;border-radius:14px;background:var(--bollo);color:var(--arancio-testo);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px
+}
+.blocco .icona svg{width:26px;height:26px}
+.blocco p{margin-top:8px;color:var(--testo-2);font-size:17px}
 
-/* ---------- 4. COSA PUÒ FARE ---------- */
-.cosa h2 .stellina{display:inline-block;width:30px;height:30px;color:var(--arancio);vertical-align:top;margin-left:6px}
-.card-griglia{display:grid;gap:14px;margin-top:28px}
-.card{
-  display:flex;align-items:center;gap:16px;background:#fff;border-radius:16px;
-  padding:20px;box-shadow:0 2px 10px rgba(11,23,51,.06)
-}
-.card .bollo{
-  flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:var(--bollo);
-  display:flex;align-items:center;justify-content:center;color:var(--blu)
-}
-.card .bollo svg{width:26px;height:26px}
-.card.arancio{background:var(--arancio)}
-.card.arancio .bollo{background:transparent}
-.card.arancio .bollo svg{width:38px;height:38px;color:#fff}
-
-/* ---------- 5. COME FUNZIONA ---------- */
-.come{padding-top:0}
-.come .foto img{width:100%;aspect-ratio:1000/911;object-fit:cover;object-position:center 25%;max-height:420px}
-.come .testo{padding-top:40px}
-.passi{list-style:none;margin-top:6px}
-.passi li{display:flex;gap:16px;position:relative;padding-bottom:28px}
-.passi li:last-child{padding-bottom:0}
-.passi li::before{
-  content:"";position:absolute;left:12px;top:40px;bottom:6px;width:2px;background:var(--arancio)
-}
-.passi li:last-child::before{display:none}
-.passi .n{flex:0 0 26px;font-size:28px;font-weight:800;line-height:1;color:var(--arancio)}
-.passi h3{font-size:20px}
-.passi p{margin-top:4px;color:var(--su-blu)}
+/* ---------- 5. NON FA PER ME ---------- */
+.obiezioni{display:grid;gap:16px;margin-top:40px}
+.obiezione{background:var(--blu-2);border:1px solid var(--blu-linea);border-radius:18px;padding:26px}
+.obiezione h3{color:var(--arancio);font-size:21px}
+.obiezione p{margin-top:10px;color:var(--su-blu);font-size:17px}
 
 /* ---------- 6. CHI SONO ---------- */
-.chi h2{color:var(--arancio-testo)}
-.chi .ritratto{width:200px;height:200px;border-radius:18px;margin:22px 0 18px;object-fit:cover}
-.chi .nome{font-size:26px;font-weight:800}
-.chi p{font-size:19px}
+.chi .ritratto{width:220px;aspect-ratio:1;border-radius:20px;object-fit:cover}
+.chi .nome{font-size:22px;font-weight:800;margin-top:6px;color:var(--arancio-testo)}
+mark.da-confermare{background:#FFE34D;color:var(--testo);padding:1px 4px;border-radius:4px}
 
-/* ---------- 7. DOMANDE ---------- */
-.domande h2{margin-bottom:18px}
-.domanda{border-top:1px solid var(--bordo);padding:20px 0}
-.domanda:last-child{border-bottom:1px solid var(--bordo)}
-.domanda p{margin-top:6px;color:var(--testo-chiaro)}
+/* ---------- 7. COME LAVORO ---------- */
+.tre{display:grid;gap:16px;margin-top:40px}
+.principio{border-top:3px solid var(--arancio);padding-top:22px}
+.principio .num{font-size:14px;font-weight:700;letter-spacing:.1em;color:var(--arancio)}
+.principio h3{margin-top:6px;font-size:22px}
+.principio p{margin-top:8px;color:var(--su-blu);font-size:17px}
 
-/* ---------- 8. CTA FINALE ---------- */
-.finale{text-align:center;padding:64px 0}
-.finale p{color:var(--su-blu);max-width:480px;margin-left:auto;margin-right:auto}
-.finale .cta{margin-top:26px}
+/* ---------- 8. COME FUNZIONA ---------- */
+.passi{list-style:none;display:grid;gap:0;margin-top:40px;counter-reset:passo}
+.passo{position:relative;display:flex;gap:18px;padding-bottom:30px}
+.passo:last-child{padding-bottom:0}
+.passo::after{content:"";position:absolute;left:23px;top:52px;bottom:6px;width:2px;background:var(--bordo)}
+.passo:last-child::after{display:none}
+.passo .n{
+  flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:var(--blu);color:#fff;
+  font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;position:relative;z-index:1
+}
+.passo p{margin-top:6px;color:var(--testo-2);font-size:17px}
 
-footer{background:#07102A;color:#AEB7CA;text-align:center;font-size:15px;padding:28px 22px calc(28px + env(safe-area-inset-bottom))}
+/* ---------- 9. I 30 MINUTI ---------- */
+.riquadro{
+  background:var(--bianco);border:3px solid var(--arancio);border-radius:24px;overflow:hidden;
+  box-shadow:0 20px 50px rgba(11,23,51,.08)
+}
+.riquadro .foto{border-radius:0;aspect-ratio:3/2}
+.riquadro .corpo{padding:32px 24px 36px}
+.colonne{display:grid;gap:28px;margin-top:28px}
+.colonne h3{font-size:17px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.lista{list-style:none}
+.lista li{display:flex;gap:12px;align-items:flex-start;padding:7px 0;font-size:17px;color:var(--testo-2)}
+.lista svg{flex:0 0 22px;width:22px;height:22px;margin-top:3px}
+.lista.si svg{color:var(--arancio-testo)}
+.lista.no svg{color:#9AA3B5}
+.riquadro .cta{margin-top:32px}
+
+/* ---------- 10. FAQ ---------- */
+.faq{margin-top:36px;border-top:1px solid var(--bordo)}
+.faq details{border-bottom:1px solid var(--bordo)}
+.faq summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:22px 0;font-weight:700;font-size:18px
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:focus-visible{outline:2px solid var(--arancio-testo);outline-offset:4px;border-radius:4px}
+.faq summary .piu{flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:var(--crema);position:relative}
+.faq summary .piu::before,.faq summary .piu::after{
+  content:"";position:absolute;left:8px;right:8px;top:13px;height:2px;background:var(--arancio-testo);transition:transform .2s ease
+}
+.faq summary .piu::after{transform:rotate(90deg)}
+.faq details[open] summary .piu::after{transform:rotate(0)}
+.faq details p{padding:0 44px 22px 0;color:var(--testo-2);font-size:17px}
+
+/* ---------- 11. CTA FINALE ---------- */
+.finale{position:relative;overflow:hidden;text-align:center;padding:96px 0}
+.finale .sfondo{position:absolute;inset:0}
+.finale .sfondo img{width:100%;height:100%;object-fit:cover}
+.finale .sfondo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,23,51,.72),rgba(11,23,51,.88))}
+.finale .contenitore{position:relative}
+.finale h2{font-size:36px}
+.finale p{color:var(--su-blu);font-size:19px;max-width:32rem;margin:20px auto 0}
+.finale .cta{margin-top:32px}
+.finale .nota-cta strong{color:#fff;white-space:nowrap}
+
+footer{background:#07102A;color:#A9B3C8;font-size:15px;line-height:1.7;text-align:center;padding:30px 22px calc(30px + env(safe-area-inset-bottom))}
 footer strong{color:#fff}
 
-/* ---------- BARRA FISSA (solo telefono) ---------- */
+/* ---------- BARRA WHATSAPP (solo telefono) ---------- */
 .barra{
-  position:sticky;bottom:0;z-index:20;
+  position:sticky;bottom:0;z-index:30;
   background:rgba(11,23,51,.96);border-top:1px solid var(--blu-linea);
-  padding:10px 16px calc(10px + env(safe-area-inset-bottom));text-align:center
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom))
 }
-.barra .cta{padding:16px 20px;font-size:18px;box-shadow:none;max-width:none}
+.barra .cta{max-width:none;padding:16px 20px;font-size:18px;box-shadow:none}
 .barra.nascosta{display:none}
 
-@media (min-width:860px){
+@media (min-width:640px){
+  .blocchi,.obiezioni{grid-template-columns:1fr 1fr}
+  .colonne{grid-template-columns:1fr 1fr}
+}
+
+@media (min-width:900px){
   body{font-size:19px}
-  section{padding:84px 0}
-  h1{font-size:58px;letter-spacing:-1.6px}
-  h2{font-size:40px}
-  .hero{padding:72px 0 84px}
-  .hero-griglia{display:grid;grid-template-columns:1fr 460px;gap:56px;align-items:center}
-  .hero-foto{margin-top:0}
-  .hero .sottotitolo{font-size:22px}
-  .offerta{padding-top:84px}
-  .offerta h2{font-size:48px}
-  .due-colonne{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
-  .tempo,.come{padding:0}
-  .tempo .foto img,.come .foto img{height:100%;max-height:none;aspect-ratio:auto}
-  .tempo .testo,.come .testo{padding:84px 56px;align-self:center;max-width:560px}
-  .card-griglia{grid-template-columns:1fr 1fr;gap:18px}
-  .card{padding:26px}
-  .chi-griglia{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:start}
-  .chi .ritratto{width:240px;height:240px;margin:0}
+  section{padding:112px 0}
+  h1{font-size:60px;line-height:1.05}
+  h2{font-size:44px;line-height:1.1}
+  .hero{padding:88px 0 112px}
+  .hero .griglia{display:grid;grid-template-columns:1fr 440px;gap:72px;align-items:center}
+  .hero .sottotitolo{font-size:21px}
+  .hero .foto{margin-top:0}
+  .coppia{grid-template-columns:1fr 1fr;gap:80px}
+  .coppia.foto-a-sinistra .foto{order:-1}
+  .obiezioni{grid-template-columns:repeat(4,1fr)}
+  .chi .coppia{grid-template-columns:280px 1fr;gap:64px;align-items:start}
+  .chi .ritratto{width:280px}
+  .tre{grid-template-columns:repeat(3,1fr);gap:40px}
+  .passi{grid-template-columns:repeat(3,1fr);gap:40px}
+  .passo{flex-direction:column;padding-bottom:0}
+  .passo::after{left:64px;right:-28px;top:23px;bottom:auto;width:auto;height:2px}
+  .riquadro{display:grid;grid-template-columns:5fr 6fr}
+  .riquadro .foto{aspect-ratio:auto;height:100%}
+  .riquadro .corpo{padding:52px 48px}
+  .finale{padding:140px 0}
+  .finale h2{font-size:52px}
   .barra{display:none}
 }
 </style>
@@ -209,212 +250,336 @@ footer strong{color:#fff}
 
 <!-- ============ 1. HERO ============ -->
 <section class="scura hero">
-  <div class="wrap-largo hero-griglia">
+  <div class="contenitore griglia">
     <div>
-      <span class="etichetta">Pragmatek · Per negozi e attività</span>
-      <h1>Tu pensa ai clienti.<br> Al resto ci pensa <span class="evidenza">l’intelligenza artificiale.</span></h1>
-      <p class="sottotitolo">30 minuti di consulenza gratuita, direttamente nella tua attività a Torino.</p>
-      <a class="cta" id="cta-hero" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20volantino%20Pragmatek%20e%20vorrei%20i%2030%20minuti%20gratis">
+      <span class="etichetta">Pragmatek · Intelligenza artificiale per negozi e attività</span>
+      <h1>Tu pensa ai clienti. Al resto ci pensa <span class="evidenza">l’intelligenza artificiale.</span></h1>
+      <p class="sottotitolo">Ogni giorno una parte del tuo tempo se ne va in lavori che non vede nessuno e che non ti portano clienti. Oggi l’intelligenza artificiale può farli al posto tuo. Ti spiego come, in 30 minuti, gratis, direttamente nella tua attività.</p>
+      <a class="cta" id="cta-hero" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20sito%20Pragmatek%20e%20vorrei%20prenotare%20i%2030%20minuti%20gratis">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
-        Scrivimi su WhatsApp
+        Prenota i 30 minuti gratis
       </a>
-      <p class="sotto-cta">Rispondo io, in giornata: <strong>351 431 7452</strong></p>
+      <p class="nota-cta">Mi scrivi su WhatsApp, ti rispondo io in giornata.</p>
     </div>
-    <div class="hero-foto">
-      <img src="img/negoziante-640.webp"
-           srcset="img/negoziante-640.webp 640w, img/negoziante-1200.webp 1200w"
-           sizes="(min-width:860px) 460px, calc(100vw - 44px)"
-           width="1200" height="957" fetchpriority="high"
-           alt="Un negoziante sorridente con il grembiule, appoggiato al bancone della sua bottega piena di barattoli e bottiglie">
-      <div class="bollino">30 minuti di consulenza<br>GRATUITA nella tua attività</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 2. 30 MINUTI GRATIS ============ -->
-<section class="chiara offerta">
-  <div class="wrap">
-    <h2>30 minuti gratis</h2>
-    <p class="intro">Scopriamo insieme, con esempi concreti, come l’IA può aiutare la tua attività.</p>
-    <span class="trattino"></span>
-    <ul class="spunte">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Vengo io nella tua attività</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Nessun costo, nessun impegno</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Spiegato in modo semplice</li>
-    </ul>
-    <p class="prenota">Prenota su WhatsApp</p>
-    <a class="numero" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20volantino%20Pragmatek%20e%20vorrei%20i%2030%20minuti%20gratis">351 431 7452</a><br>
-    <a class="cta" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20volantino%20Pragmatek%20e%20vorrei%20i%2030%20minuti%20gratis">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
-      Voglio i 30 minuti gratis
-    </a>
-  </div>
-</section>
-
-<!-- ============ 3. RIPRENDITI IL TUO TEMPO ============ -->
-<section class="scura tempo">
-  <div class="due-colonne">
     <div class="foto">
-      <img src="img/panetteria-560.webp"
-           srcset="img/panetteria-560.webp 560w, img/panetteria-1000.webp 1000w"
-           sizes="(min-width:860px) 50vw, 100vw"
-           width="1000" height="1047" loading="lazy"
-           alt="Una panettiera sorridente consegna un sacchetto di carta a una cliente al bancone del suo forno">
-    </div>
-    <div class="testo wrap">
-      <h2><span class="evidenza">Riprenditi</span><br>il tuo tempo.</h2>
-      <span class="trattino"></span>
-      <p><strong>Molte delle cose che ti rubano tempo ogni giorno, l’intelligenza artificiale può farle al posto tuo.</strong></p>
-      <p>Tu recuperi <span class="evidenza">ore ogni settimana</span> da dedicare ai clienti, alla tua attività o a te stesso.</p>
+      <img src="img/hero-bancone-720.webp"
+           srcset="img/hero-bancone-720.webp 720w, img/hero-bancone-1200.webp 1200w"
+           sizes="(min-width:900px) 440px, calc(100vw - 44px)"
+           width="1200" height="1500" fetchpriority="high"
+           alt="Un negoziante con il grembiule di cuoio dietro il bancone della sua bottega, mentre serve un cliente">
     </div>
   </div>
 </section>
 
-<!-- ============ 4. COSA PUÒ FARE L'IA PER TE ============ -->
-<section class="chiara cosa">
-  <div class="wrap-largo">
-    <h2>Cosa può fare <span class="evidenza">l’intelligenza artificiale</span> per te?<svg class="stellina" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.3 7.7L22 12l-7.7 2.3L12 22l-2.3-7.7L2 12l7.7-2.3z"/></svg></h2>
+<!-- ============ 2. IL PROBLEMA ============ -->
+<section class="crema">
+  <div class="contenitore coppia foto-a-sinistra">
+    <div class="misura appare">
+      <h2>Il tuo lavoro non finisce quando chiudi.</h2>
+      <div class="testo-sezione">
+        <p>Hai aperto la tua attività per fare quello che sai fare. Ma ogni giorno c’è un secondo lavoro che nessuno vede: rispondere, organizzare, ricordare, ripetere le stesse cose.</p>
+        <p>Lo fai tra un cliente e l’altro, o la sera, quando sei già stanco.</p>
+        <p><strong>Non è il lavoro per cui hai aperto. E non ti porta un cliente in più.</strong></p>
+      </div>
+    </div>
+    <div class="foto appare">
+      <img src="img/problema-sera-720.webp"
+           srcset="img/problema-sera-720.webp 720w, img/problema-sera-1200.webp 1200w"
+           sizes="(min-width:900px) 520px, calc(100vw - 44px)"
+           width="1200" height="1500" loading="lazy"
+           alt="Un titolare da solo nel suo locale a fine giornata, chino sul bancone sotto una lampada, con il resto del negozio in penombra">
+    </div>
+  </div>
+</section>
 
-    <div class="card-griglia">
-      <div class="card">
-        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
-        <h3>Lavora per te, anche quando sei chiuso</h3>
+<!-- ============ 3. COSA È CAMBIATO ============ -->
+<section class="scura">
+  <div class="contenitore coppia">
+    <div class="misura appare">
+      <h2>Fino a ieri era una cosa da grandi aziende. <span class="evidenza">Oggi no.</span></h2>
+      <div class="testo-sezione">
+        <p>Per anni l’intelligenza artificiale è stata uno strumento per chi aveva un reparto informatico e budget importanti.</p>
+        <p>Oggi è cambiato tutto: è accessibile, costa poco e non serve saperla usare. <strong>Serve qualcuno che la prepari su misura per te.</strong></p>
+        <p>Le grandi aziende la usano già ogni giorno. La differenza è che adesso può lavorare anche per te.</p>
       </div>
-      <div class="card">
-        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 3.5v5h5"/><path d="M12 7.5V12l3 2"/></svg></span>
-        <h3>Ti restituisce ore ogni settimana</h3>
+    </div>
+    <div class="foto larga appare">
+      <img src="img/cambiamento-smartphone-800.webp"
+           srcset="img/cambiamento-smartphone-800.webp 800w, img/cambiamento-smartphone-1600.webp 1600w"
+           sizes="(min-width:900px) 520px, calc(100vw - 44px)"
+           width="1600" height="1067" loading="lazy"
+           alt="Un negoziante sorridente con il grembiule blu che usa lo smartphone davanti al banco della sua bottega">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. COSA FA PER TE ============ -->
+<section class="bianca">
+  <div class="contenitore">
+    <div class="appare">
+      <h2 class="misura">Un aiuto in più, che lavora al posto tuo.</h2>
+      <p class="sottotitolo" style="margin-top:22px">Pensa all’intelligenza artificiale come a un collaboratore che si occupa del lavoro ripetitivo, così tu ti occupi di quello che conta.</p>
+    </div>
+    <div class="blocchi">
+      <div class="blocco appare">
+        <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+        <h3>Lavora anche quando sei chiuso.</h3>
+        <p>Di sera, la domenica, mentre sei in ferie: continua a fare la sua parte.</p>
       </div>
-      <div class="card">
-        <span class="bollo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L4.8 4h14.4L21 9.5"/><path d="M3 9.5h18v1a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M4.5 13.2V20h15v-6.8"/><path d="M10 20v-4.5h4V20"/></svg></span>
-        <h3>Si adatta al tuo modo di lavorare</h3>
+      <div class="blocco appare">
+        <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2.5l3 3-3 3"/><path d="M4 11v-1a4.5 4.5 0 0 1 4.5-4.5H20"/><path d="M7 21.5l-3-3 3-3"/><path d="M20 13v1a4.5 4.5 0 0 1-4.5 4.5H4"/></svg></span>
+        <h3>Non si stanca e non dimentica.</h3>
+        <p>Fa le stesse cose sempre allo stesso modo, alla centesima volta come alla prima.</p>
       </div>
-      <div class="card arancio">
-        <span class="bollo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.3 7.7L22 12l-7.7 2.3L12 22l-2.3-7.7L2 12l7.7-2.3z"/></svg></span>
-        <h3>E molto altro: scoprilo in 30 minuti</h3>
+      <div class="blocco appare">
+        <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 3.5v5h5"/><path d="M12 7.5V12l3 2"/></svg></span>
+        <h3>Ti restituisce ore ogni settimana.</h3>
+        <p>Il tempo che oggi perdi in lavori ripetitivi torna a te: per i clienti, per la tua attività o per te stesso.</p>
+      </div>
+      <div class="blocco appare">
+        <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L4.8 4h14.4L21 9.5"/><path d="M3 9.5h18v1a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M4.5 13.2V20h15v-6.8"/><path d="M10 20v-4.5h4V20"/></svg></span>
+        <h3>Si adatta a come lavori tu.</h3>
+        <p>Non devi cambiare le tue abitudini. È lei che si adatta alla tua attività.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 5. COME FUNZIONA ============ -->
-<section class="scura come">
-  <div class="due-colonne">
-    <div class="foto">
-      <img src="img/parrucchiera-560.webp"
-           srcset="img/parrucchiera-560.webp 560w, img/parrucchiera-1000.webp 1000w"
-           sizes="(min-width:860px) 50vw, 100vw"
-           width="1000" height="911" loading="lazy"
-           alt="Una parrucchiera sorridente con il telefono in mano, nel suo salone con gli specchi ad arco">
-    </div>
-    <div class="testo wrap">
-      <h2>Come funziona</h2>
-      <span class="trattino"></span>
-      <ol class="passi">
-        <li>
-          <span class="n">1.</span>
-          <div>
-            <h3>Ci conosciamo</h3>
-            <p>30 minuti <span class="evidenza">gratis e senza impegno</span></p>
-          </div>
-        </li>
-        <li>
-          <span class="n">2.</span>
-          <div>
-            <h3>Ti propongo una soluzione</h3>
-            <p>su misura per la tua attività</p>
-          </div>
-        </li>
-        <li>
-          <span class="n">3.</span>
-          <div>
-            <h3>Se ti convince, partiamo</h3>
-            <p>e ti seguo passo dopo passo</p>
-          </div>
-        </li>
-      </ol>
+<!-- ============ 5. "NON FA PER ME" ============ -->
+<section class="scura">
+  <div class="contenitore">
+    <h2 class="misura appare">“Bello, ma non fa per me.” <span class="evidenza">Davvero?</span></h2>
+    <div class="obiezioni">
+      <div class="obiezione appare">
+        <h3>“È complicato.”</h3>
+        <p>Non devi imparare niente di tecnico. Preparo tutto io e ti spiego quello che serve con parole normali.</p>
+      </div>
+      <div class="obiezione appare">
+        <h3>“Costa troppo.”</h3>
+        <p>Prima di iniziare sai quanto spendi, per iscritto. E spesso costa meno del tempo che ti fa risparmiare.</p>
+      </div>
+      <div class="obiezione appare">
+        <h3>“Mi toglie il rapporto con i clienti.”</h3>
+        <p>Il contrario: si occupa del lavoro ripetitivo, così hai più tempo per i clienti, quelli veri.</p>
+      </div>
+      <div class="obiezione appare">
+        <h3>“Non mi fido.”</h3>
+        <p>Giusto. Per questo il primo passo è gratis: ti faccio vedere cosa può fare, e decidi tu.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ 6. CHI SONO ============ -->
-<section class="chiara chi">
-  <div class="wrap-largo chi-griglia">
-    <img class="ritratto" src="img/fedele-360.webp"
+<section class="crema chi">
+  <div class="contenitore coppia">
+    <img class="ritratto appare" src="img/fedele-360.webp"
          srcset="img/fedele-360.webp 360w, img/fedele-600.webp 600w"
-         sizes="(min-width:860px) 240px, 200px"
+         sizes="(min-width:900px) 280px, 220px"
          width="600" height="600" loading="lazy"
          alt="Fedele Buccino, titolare di Pragmatek, sorridente in giacca scura">
-    <div>
+    <div class="misura appare">
       <h2>Chi sono</h2>
       <p class="nome">Fedele Buccino</p>
-      <p>Ciao, sono Fedele e aiuto le attività a usare la tecnologia e l’intelligenza artificiale. La cosa che mi piace di più è vederle diventare semplici nelle mani di chi lavora.</p>
-      <p>Non ti proporrò mai qualcosa che non ti serve. Prima ti ascolto, poi ti mostro come l’IA può aiutare la tua attività. Ti stupirà scoprire quante cose può fare al posto tuo.</p>
+      <!-- ATTENZIONE: togliere gli evidenziati gialli [DA CONFERMARE] prima della pubblicazione -->
+      <div class="testo-sezione" style="margin-top:18px">
+        <p>Ciao, sono Fedele. Mi occupo di informatica e intelligenza artificiale <mark class="da-confermare">[DA CONFERMARE: diploma ITS in informatica]</mark> e aiuto aziende e piccole attività a usarla nel lavoro di tutti i giorni <mark class="da-confermare">[DA CONFERMARE: tra Torino e la Val di Susa]</mark>.</p>
+        <p>La cosa che mi piace di più è prendere uno strumento che sembra complicato e renderlo semplice per chi lavora.</p>
+        <p><strong>Non ti proporrò mai qualcosa che non ti serve.</strong> Prima ti ascolto, poi ti dico cosa si può fare e cosa no. Se una cosa non ti serve, te lo dico.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 7. DOMANDE ============ -->
-<section class="bianca domande">
-  <div class="wrap">
-    <h2>Domande</h2>
-    <div class="domanda">
-      <h3>Devo capirci qualcosa di computer?</h3>
-      <p>No. Faccio io. Poi ti spiego con parole normali.</p>
-    </div>
-    <div class="domanda">
-      <h3>Quanto costa?</h3>
-      <p>Te lo dico prima, scritto. Nessuna sorpresa alla fine.</p>
-    </div>
-    <div class="domanda">
-      <h3>E se non mi serve?</h3>
-      <p>Te lo dico io. Non ti vendo una cosa che lasci lì dopo un mese.</p>
-    </div>
-    <div class="domanda">
-      <h3>Lavori anche con aziende e artigiani?</h3>
-      <p>Sì. Scrivimi e ti dico cosa posso fare per la tua attività.</p>
+<!-- ============ 7. COME LAVORO ============ -->
+<section class="scura">
+  <div class="contenitore">
+    <h2 class="appare">Tre cose che faccio sempre</h2>
+    <div class="tre">
+      <div class="principio appare">
+        <span class="num">01</span>
+        <h3>Prezzi scritti prima.</h3>
+        <p>Sai quanto spendi prima che io cominci. Nessuna sorpresa alla fine.</p>
+      </div>
+      <div class="principio appare">
+        <span class="num">02</span>
+        <h3>Tempi corti.</h3>
+        <p>Niente progetti che durano mesi. Ti porto risultati in poco tempo.</p>
+      </div>
+      <div class="principio appare">
+        <span class="num">03</span>
+        <h3>Poi vai da solo.</h3>
+        <p>Ti spiego tutto finché non sei tranquillo. Non resti legato a me.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 8. CTA FINALE ============ -->
+<!-- ============ 8. COME FUNZIONA ============ -->
+<section class="bianca">
+  <div class="contenitore">
+    <h2 class="appare">Come funziona</h2>
+    <ol class="passi">
+      <li class="passo appare">
+        <span class="n">1</span>
+        <div>
+          <h3>Ci conosciamo.</h3>
+          <p>30 minuti, gratis e senza impegno. Vengo io nella tua attività.</p>
+        </div>
+      </li>
+      <li class="passo appare">
+        <span class="n">2</span>
+        <div>
+          <h3>Ti propongo una soluzione su misura.</h3>
+          <p>Per iscritto, con il prezzo, prima di iniziare. Se non ti convince, ci salutiamo da amici.</p>
+        </div>
+      </li>
+      <li class="passo appare">
+        <span class="n">3</span>
+        <div>
+          <h3>Se ti convince, partiamo.</h3>
+          <p>Preparo tutto io e ti seguo passo dopo passo.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 9. I 30 MINUTI GRATIS ============ -->
+<section class="crema">
+  <div class="contenitore">
+    <div class="riquadro appare">
+      <div class="foto">
+        <img src="img/trenta-minuti-800.webp"
+             srcset="img/trenta-minuti-800.webp 800w, img/trenta-minuti-1600.webp 1600w"
+             sizes="(min-width:900px) 480px, calc(100vw - 50px)"
+             width="1600" height="1067" loading="lazy"
+             alt="Persone sedute a un tavolino di un bar che parlano sorridendo, una mostra qualcosa sul tablet">
+      </div>
+      <div class="corpo">
+        <h2>Cosa succede nei <span class="evidenza">30 minuti gratis</span></h2>
+        <div class="colonne">
+          <div>
+            <h3>Cosa facciamo</h3>
+            <ul class="lista si">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Mi racconti come funziona la tua giornata di lavoro.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Ti spiego in modo semplice cosa può fare l’intelligenza artificiale per la tua attività.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Ti dico con sincerità se ti conviene o no.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Cosa NON succede</h3>
+            <ul class="lista no">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Nessun contratto da firmare.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Nessuna vendita forzata.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Nessun costo, nemmeno nascosto.</li>
+            </ul>
+          </div>
+        </div>
+        <a class="cta" id="cta-trenta" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20sito%20Pragmatek%20e%20vorrei%20prenotare%20i%2030%20minuti%20gratis">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
+          Prenota i 30 minuti gratis
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. DOMANDE FREQUENTI ============ -->
+<section class="bianca">
+  <div class="contenitore">
+    <div class="misura" style="max-width:46rem">
+      <h2 class="appare">Domande frequenti</h2>
+      <div class="faq appare">
+        <details>
+          <summary>Devo capirci qualcosa di computer?<span class="piu" aria-hidden="true"></span></summary>
+          <p>No. Faccio io, e ti spiego tutto con parole normali.</p>
+        </details>
+        <details>
+          <summary>Quanto costa?<span class="piu" aria-hidden="true"></span></summary>
+          <p>I 30 minuti sono gratis. Se poi decidiamo di lavorare insieme, ti do un prezzo scritto prima di iniziare.</p>
+        </details>
+        <details>
+          <summary>E se alla fine non mi serve?<span class="piu" aria-hidden="true"></span></summary>
+          <p>Te lo dico io. Non ti vendo una cosa che lasci lì dopo un mese.</p>
+        </details>
+        <details>
+          <summary>Devo cambiare il modo in cui lavoro?<span class="piu" aria-hidden="true"></span></summary>
+          <p>No. È l’intelligenza artificiale che si adatta a te, non il contrario.</p>
+        </details>
+        <details>
+          <summary>I dati della mia attività sono al sicuro?<span class="piu" aria-hidden="true"></span></summary>
+          <p>Sì. Uso strumenti affidabili e ti spiego sempre dove finiscono i tuoi dati.</p>
+        </details>
+        <details>
+          <summary>Dove lavori?<span class="piu" aria-hidden="true"></span></summary>
+          <p>A Torino e dintorni. Vengo io nella tua attività.</p>
+        </details>
+        <details>
+          <summary>Lavori anche con aziende e artigiani?<span class="piu" aria-hidden="true"></span></summary>
+          <p>Sì. Scrivimi e ti dico cosa posso fare per te.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. CTA FINALE ============ -->
 <section class="scura finale">
-  <div class="wrap">
-    <h2>Tu pensa ai clienti.<br><span class="evidenza">Al resto ci penso io.</span></h2>
-    <p>Scrivimi su WhatsApp e fissiamo i tuoi 30 minuti gratis. Vengo io, nella tua attività.</p>
-    <a class="cta" id="cta-finale" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20volantino%20Pragmatek%20e%20vorrei%20i%2030%20minuti%20gratis">
+  <div class="sfondo" aria-hidden="true">
+    <img src="img/finale-bottega-800.webp"
+         srcset="img/finale-bottega-800.webp 800w, img/finale-bottega-1600.webp 1600w"
+         sizes="100vw" width="1600" height="1600" loading="lazy" alt="">
+  </div>
+  <div class="contenitore appare">
+    <h2>Il tuo tempo vale <span class="evidenza">più di così.</span></h2>
+    <p>Scrivimi su WhatsApp e fissiamo i tuoi 30 minuti gratis. Vengo io, ti spiego tutto, e decidi tu.</p>
+    <a class="cta" id="cta-finale" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20sito%20Pragmatek%20e%20vorrei%20prenotare%20i%2030%20minuti%20gratis">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
       Scrivimi su WhatsApp
     </a>
-    <p class="sotto-cta">oppure salva il numero: <strong>351 431 7452</strong></p>
+    <p class="nota-cta"><strong>351 431 7452</strong> · Rispondo io, in giornata.</p>
   </div>
 </section>
 
 <footer>
   <strong>Pragmatek — Fedele Buccino</strong><br>
-  Intelligenza artificiale per negozi e attività · Torino<br>
+  Intelligenza artificiale per negozi e attività<br>
   P.IVA IT13295980018
 </footer>
 
 <!-- bottone WhatsApp sempre a portata di pollice (solo telefono) -->
 <div class="barra nascosta">
-  <a class="cta" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20volantino%20Pragmatek%20e%20vorrei%20i%2030%20minuti%20gratis">
+  <a class="cta" href="https://wa.me/393514317452?text=Ciao%2C%20ho%20visto%20il%20sito%20Pragmatek%20e%20vorrei%20prenotare%20i%2030%20minuti%20gratis">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.5-.1 1z"/></svg>
-    Scrivimi su WhatsApp
+    Prenota i 30 minuti gratis
   </a>
 </div>
 
 <script>
-/* la barra in basso compare solo quando nessun altro bottone grande è sullo schermo */
 (function(){
+  /* dissolvenza leggera quando una sezione entra nello schermo */
+  var elementi = document.querySelectorAll('.appare');
+  if(!('IntersectionObserver' in window)){
+    elementi.forEach(function(e){ e.classList.add('visibile'); });
+  } else {
+    var entrata = new IntersectionObserver(function(voci){
+      voci.forEach(function(v){
+        if(v.isIntersecting){ v.target.classList.add('visibile'); entrata.unobserve(v.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px'});
+    elementi.forEach(function(e){ entrata.observe(e); });
+  }
+
+  /* la barra in basso compare solo quando nessun altro bottone WhatsApp è sullo schermo */
   var barra = document.querySelector('.barra');
-  var bottoni = [document.getElementById('cta-hero'), document.getElementById('cta-finale')];
   if(!('IntersectionObserver' in window)){ barra.classList.remove('nascosta'); return; }
   var visibili = {};
   var osservatore = new IntersectionObserver(function(voci){
     voci.forEach(function(v){ visibili[v.target.id] = v.isIntersecting; });
-    barra.classList.toggle('nascosta', !!(visibili['cta-hero'] || visibili['cta-finale']));
+    barra.classList.toggle('nascosta', !!(visibili['cta-hero'] || visibili['cta-trenta'] || visibili['cta-finale']));
   });
-  bottoni.forEach(function(b){ osservatore.observe(b); });
+  ['cta-hero','cta-trenta','cta-finale'].forEach(function(id){ osservatore.observe(document.getElementById(id)); });
 })();
 </script>
 
