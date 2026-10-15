@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Solo le pagine pubbliche. circuito.html e grazie.html restano fuori di proposito.
+<!-- Solo le pagine pubbliche. grazie.html resta fuori di proposito; circuito.html e canale.html non sono pubblicate.
      Le pagine di segmento (pmi, artigiani, attivita, ristorazione) restano online ma fuori dalla sitemap. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.pragmatek.it/</loc>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.pragmatek.it/canale.html</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.pragmatek.it/privacy</loc>

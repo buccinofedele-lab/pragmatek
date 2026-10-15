@@ -1,0 +1,5 @@
+# Netlify pubblica la cartella "dist", preparata qui sotto copiando il sito.
+# circuito.html e canale.html restano nel repository ma NON vengono pubblicate.
+[build]
+  publish = "dist"
+  command = "rm -rf dist && mkdir dist && cp -r *.html *.xml *.txt img dist/ && rm dist/circuito.html dist/canale.html"
